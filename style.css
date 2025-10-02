@@ -1,0 +1,13 @@
+@keyframes animacao {
+  from { background-color: #7917c9; }
+  to { background-color: #00e676; }
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.25rem;
+}
+.navbar-brand {
+  font-size: 1.25rem;
+}
+
+
