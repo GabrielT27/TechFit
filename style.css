@@ -65,3 +65,15 @@
 .card-button-dicas:hover {
   background: #171070;
 }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      text-align: center;
+    }
+    .card .btn {
+      border-color: #0353a4;background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 50%, #2d4a78 100%);
+      color: white;
+      font-weight: bold;
+    }
