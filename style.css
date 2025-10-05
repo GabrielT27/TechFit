@@ -77,3 +77,86 @@
       color: white;
       font-weight: bold;
     }
+     footer {
+            background-color: #000000;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .contato {
+            margin-bottom: 20px;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: #aaa;
+        }
+/* ===== ÍCONES SOCIAIS ===== */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0 40px 0;
+}
+
+.social-icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: white;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* FACEBOOK */
+.social-icons .facebook {
+  background: #1877f2;
+}
+.social-icons .facebook:hover {
+  background: #145dbf;
+  transform: scale(1.1);
+}
+
+/* INSTAGRAM */
+.social-icons .instagram {
+  background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
+}
+.social-icons .instagram:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* WHATSAPP */
+.social-icons .whatsapp {
+  background: #25d366;
+}
+.social-icons .whatsapp:hover {
+  background: #1da851;
+  transform: scale(1.1);
+}
+
+/* Twitter */
+.social-icons .twitter {
+  background: #018bc2;
+}
+.social-icons .twitter:hover {
+  background: #0b679c;
+  transform: scale(1.1);
+}
+
+/* Youtube */
+.social-icons .youtube {
+  background: #d81c1c;
+}
+.social-icons .youtube:hover {
+  background: #860e0e;
+  transform: scale(1.1);
+}
