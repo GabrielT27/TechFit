@@ -1,8 +1,10 @@
+/* ===== Animação ===== */
 @keyframes animacao {
   from { background-color: #7917c9; }
   to { background-color: #00e676; }
 }
 
+/* ===== Navbar ===== */
 .navbar-nav .nav-link {
   font-size: 1.25rem;
 }
@@ -10,15 +12,14 @@
   font-size: 1.25rem;
 }
 
+/* ===== Títulos ===== */
 .h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    
-
-
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
- .card-container-dicas {
+/* ===== Cards ===== */
+.card-container-dicas {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
@@ -34,7 +35,7 @@
   max-width: 390px;
   text-align: center;
   flex: 1 1 200px;
-  position: relative; /* necessário para o botão absoluto */
+  position: relative;
 }
 
 .card-img-dicas {
@@ -46,10 +47,11 @@
 
 .card-button-dicas {
   position: absolute;
-  bottom: 20px; /* distância do fundo da imagem */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  border-color: #0353a4;background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 50%, #2d4a78 100%);
+  border-color: #0353a4;
+  background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 50%, #2d4a78 100%);
   color: #ffffff;
   border: none;
   padding: 1px 50px;
@@ -59,41 +61,47 @@
   opacity: 0.95;
   z-index: 2;
   width: auto;
-  /* Remova border-top e width: 100% */
 }
 
 .card-button-dicas:hover {
   background: #171070;
 }
-    .card img {
-      height: 200px;
-      object-fit: cover;
-    }
-    .card-body {
-      text-align: center;
-    }
-    .card .btn {
-      border-color: #0353a4;background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 50%, #2d4a78 100%);
-      color: white;
-      font-weight: bold;
-    }
-     footer {
-            background-color: #000000;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .contato {
-            margin-bottom: 20px;
-        }
-        
-        .copyright {
-            font-size: 14px;
-            color: #aaa;
-        }
-/* ===== ÍCONES SOCIAIS ===== */
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card .btn {
+  border-color: #0353a4;
+  background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 50%, #2d4a78 100%);
+  color: white;
+  font-weight: bold;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contato {
+  margin-bottom: 20px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ===== Ícones sociais ===== */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -116,47 +124,46 @@
   z-index: 2;
 }
 
-/* FACEBOOK */
-.social-icons .facebook {
-  background: #1877f2;
-}
-.social-icons .facebook:hover {
-  background: #145dbf;
-  transform: scale(1.1);
+.social-icons .facebook { background: #1877f2; }
+.social-icons .facebook:hover { background: #145dbf; transform: scale(1.1); }
+
+.social-icons .instagram { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); }
+.social-icons .instagram:hover { transform: scale(1.1); filter: brightness(1.1); }
+
+.social-icons .whatsapp { background: #25d366; }
+.social-icons .whatsapp:hover { background: #1da851; transform: scale(1.1); }
+
+.social-icons .twitter { background: #018bc2; }
+.social-icons .twitter:hover { background: #0b679c; transform: scale(1.1); }
+
+.social-icons .youtube { background: #d81c1c; }
+.social-icons .youtube:hover { background: #860e0e; transform: scale(1.1); }
+
+/* ===== Responsividade ===== */
+@media (max-width: 1200px) {
+  .card-container-dicas { gap: 30px; }
+  .card-dicas { max-width: 300px; }
+  #carouselExample { width: 90%; margin: 0 auto; }
 }
 
-/* INSTAGRAM */
-.social-icons .instagram {
-  background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
-}
-.social-icons .instagram:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
+@media (max-width: 992px) {
+  .navbar-nav { text-align: center; }
+  .navbar-nav .nav-link { font-size: 1.1rem; }
+  .card-dicas { max-width: 250px; }
+  .card-button-dicas { padding: 1px 40px; font-size: 0.95rem; }
 }
 
-/* WHATSAPP */
-.social-icons .whatsapp {
-  background: #25d366;
-}
-.social-icons .whatsapp:hover {
-  background: #1da851;
-  transform: scale(1.1);
-}
-
-/* Twitter */
-.social-icons .twitter {
-  background: #018bc2;
-}
-.social-icons .twitter:hover {
-  background: #0b679c;
-  transform: scale(1.1);
+@media (max-width: 768px) {
+  .card-container-dicas { flex-direction: column; gap: 20px; }
+  .card-dicas { max-width: 100%; }
+  .versiculo { font-size: 0.9rem; }
+  .card .btn { width: 100%; }
+  h2.h2 { font-size: 1.5rem; }
 }
 
-/* Youtube */
-.social-icons .youtube {
-  background: #d81c1c;
-}
-.social-icons .youtube:hover {
-  background: #860e0e;
-  transform: scale(1.1);
+@media (max-width: 576px) {
+  .navbar-brand img { width: 120px; height: 60px; margin-left: 0; }
+  .navbar-nav .nav-link { font-size: 1rem; }
+  .card-button-dicas { padding: 1px 30px; font-size: 0.9rem; }
+  .card img { height: 180px; }
 }
