@@ -24,30 +24,23 @@ body {
 .container {
     position: relative;
     width: 420px;
-    color: white;
     padding: 30px 40px;
     border-radius: 20px;
-    background-color: #0f172a; /* fundo interno */
+    color: white;
     z-index: 1;
+
+    /* borda transparente para deixar ver o degradê */
+    border: 3px solid transparent;
+
+    /* duas camadas: uma para o fundo, outra para a borda */
+    background-image: 
+        linear-gradient(#0f172a, #0f172a), /* fundo interno */
+        linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa, #93c5fd); /* borda */
+
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
-.container::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 3px; /* espessura da borda */
-    border-radius: 20px;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa, #93c5fd);
-    
-    /* truque para criar a borda */
-        -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-            mask-composite: exclude;
-    
-    z-index: -1;
-}
 
 
 .container h1 {
