@@ -103,9 +103,10 @@
   height: 90vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #000000, #01081b);
+  background: linear-gradient(135deg, #103358, #000000);
 
 }
+
 
 button {
   color: white;
@@ -115,8 +116,12 @@ button {
   background: none;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
-  margin-top: -35%;
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  margin-top: 15px;
 }
+
 
 button::before {
   margin-left: auto;
