@@ -36,16 +36,103 @@
     margin-top: -10px;
 }
 .fundo {
-    
-margin: 0;
+  margin: 0;
   padding: 0;
-  background-image: url('ainda-vida-de-equipamentos-de-ginastica.jpg');
-  background-size: cover;       /* Faz a imagem cobrir toda a área */
+  
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0)),
+   url('ginasio-com-equipamento-de-ciclismo-indoor.jpg');
+  background-size: cover;     /* Mostra a imagem inteira */
   background-repeat: no-repeat; /* Evita repetição */
-  height: 60vh;                /* Ocupa 100% da altura da tela */
+  background-position: center;  /* Centraliza a imagem */
+  height: 80vh;                 /* Altura desejada */
   
-  
-
-    
 }
+
+.fundo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.932)),
+    url('ginasio-com-equipamento-de-ciclismo-indoor.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+.title {
+  font-size: 2.5rem;  /* aumenta o tamanho do título */
+  font-weight: 700;
+  text-align: center;
+}
+
+.title span::after {
+  content: 'TUDO';
+  animation: words 8s infinite;
+}
+
+@keyframes words {
+  0%, 33% {
+    content: 'FIT';
+    color: rgb(0, 47, 255);
+  }
+
+  34%, 66% {
+    content: 'SAÚDE';
+    color: #009ccc;
+  }
+
+  67%, 100% {
+    content: 'TUDO';
+    color: rgb(0, 238, 255);
+  }
+}
+
+.nos {
+
+    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #000000, #01081b);
+
+}
+
+button {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-top: -35%;
+}
+
+button::before {
+  margin-left: auto;
+}
+
+button::after, button::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #2295ca;
+  display: block;
+  transition: 0.5s;
+}
+
+button:hover::after, button:hover::before {
+  width: 100%;
+}
+
 
