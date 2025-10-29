@@ -142,12 +142,11 @@ button:hover::after, button:hover::before {
 
 .image-container {
     position: relative;
-    display: inline-block;
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s ease;
-    max-width: 680px; /* Largura máxima da sua imagem */
-    width: 100%;
+    max-width: 850px; /* Largura máxima da sua imagem */
+
 }
 
 .image-container:hover {
@@ -244,7 +243,7 @@ button:hover::after, button:hover::before {
   height: 90vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #000000, #050b29);
+  background: linear-gradient(135deg, #084170, #000000);
 
 }
 
