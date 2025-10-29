@@ -43,3 +43,23 @@ img {
     margin-left: 40px;
     margin-top: -10px;
 }
+
+
+.fundo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.932)),
+    url('ginasio-com-equipamento-de-ciclismo-indoor.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
