@@ -6,13 +6,6 @@
     border-image-slice: 1;
 }
 
-/* Regras globais para imagens */
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
 
 .container-fluid {
     padding: 0 !important;
@@ -50,16 +43,54 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
   margin: 0;
   padding: 0;
 
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.932)),
-    url('ginasio-com-equipamento-de-ciclismo-indoor.jpg');
+    url("TechFit Loja.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: white;
+  
 }
+
+.simples {
+color: #ffd700;
+text-align: center;
+margin: 0.5rem 0;
+font-weight: 800;
+margin-top: -450px;
+}
+
+.simples::before {
+  margin-left: auto;
+}
+
+.simples::after, .simples::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #a3940d;
+  display: block;
+  transition: 0.5s;
+}
+
+.simples:hover::after, .simples:hover::before {
+  width: 100%;
+}
+
+.img-centro {
+  width: 830px;
+  height: 550px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+
+
+
 
