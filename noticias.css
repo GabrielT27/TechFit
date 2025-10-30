@@ -1,105 +1,96 @@
 /* ===== NAVBAR ===== */
 .navbar {
-    margin: 0 !important;
-    padding: 0 !important;
-    border-bottom: 7px solid transparent;
-    border-image: linear-gradient(90deg, #003366, #0066CC, #66CCFF, #0047AB, #1F51FF);
-    border-image-slice: 1;
-}
-
-.container-fluid {
-    padding: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 7px solid transparent;
+  border-image: linear-gradient(90deg, #003366, #0066CC, #66CCFF, #0047AB, #1F51FF);
+  border-image-slice: 1;
 }
 
 .nav-container {
-    background-color: #000000;
-    height: 110px;
-    padding: 0 20px;
-}
-
-.navbar-nav .nav-link {
-    font-size: 1.25rem;
-    color: #ffffff !important;
-    transition: color 0.3s;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #66CCFF !important;
-}
-
-.navbar-brand {
-    font-size: 1.25rem;
+  background-color: #000;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
 }
 
 .logo-img {
-    border-radius: 20px;
-    margin-left: 40px;
-    margin-top: -10px;
+  border-radius: 20px;
+  height: 80px;
+  width: auto;
+}
+
+/* Links da navbar */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #ffffff !important;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #66CCFF !important;
 }
 
 /* ===== SEÇÃO FUNDO ===== */
 .fundo {
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Título e imagem um abaixo do outro */
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    margin: 0;
-    padding: 0;
-    background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.932)),
-    url("TechFit Loja.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.93)),
+              url("TechFit Loja.png") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 2rem;
 }
 
 /* ===== TÍTULO ===== */
 .simples {
-    color: #ffd700;
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    position: relative;
-    margin-top: -40px;
+  color: #ffd700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .simples::before,
 .simples::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #a3940d;
-    display: block;
-    transition: 0.5s;
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #a3940d;
+  display: block;
+  transition: 0.5s;
 }
 
 .simples:hover::after,
 .simples:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
-/* ===== IMAGEM INAUGURAÇÃO CENTRALIZADA */
+/* ===== IMAGEM INAUGURAÇÃO ===== */
 .img-centro {
-    max-width: 830px;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: 0 4px 20px rgb(255, 251, 0);
-    margin-top: 20px;
+  width: 100%;
+  max-width: 830px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgb(255, 251, 0);
+  margin-top: 20px;
 }
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
-    .simples {
-        font-size: 2rem;
-    }
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
 
-    .img-centro {
-        max-width: 95%;
-    }
+  .img-centro {
+    max-width: 95%;
+  }
 }
