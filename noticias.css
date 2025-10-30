@@ -1,3 +1,4 @@
+/* ===== NAVBAR ===== */
 .navbar {
     margin: 0 !important;
     padding: 0 !important;
@@ -5,7 +6,6 @@
     border-image: linear-gradient(90deg, #003366, #0066CC, #66CCFF, #0047AB, #1F51FF);
     border-image-slice: 1;
 }
-
 
 .container-fluid {
     padding: 0 !important;
@@ -37,60 +37,69 @@
     margin-top: -10px;
 }
 
-
+/* ===== SEÇÃO FUNDO ===== */
 .fundo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  margin: 0;
-  padding: 0;
-
-  background-image: 
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Título e imagem um abaixo do outro */
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    background-image: 
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.932)),
     url("TechFit Loja.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
 }
 
+/* ===== TÍTULO ===== */
 .simples {
-color: #ffd700;
-text-align: center;
-margin: 0.5rem 0;
-font-weight: 800;
-margin-top: -450px;
+    color: #ffd700;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: -40px;
 }
 
-.simples::before {
-  margin-left: auto;
+.simples::before,
+.simples::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #a3940d;
+    display: block;
+    transition: 0.5s;
 }
 
-.simples::after, .simples::before {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: #a3940d;
-  display: block;
-  transition: 0.5s;
+.simples:hover::after,
+.simples:hover::before {
+    width: 100%;
 }
 
-.simples:hover::after, .simples:hover::before {
-  width: 100%;
-}
-
+/* ===== IMAGEM INAUGURAÇÃO CENTRALIZADA */
 .img-centro {
-  width: 830px;
-  height: 550px;
-  border-radius: 20px;
-  object-fit: cover;
+    max-width: 830px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgb(255, 251, 0);
+    margin-top: 20px;
 }
 
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .simples {
+        font-size: 2rem;
+    }
 
-
-
-
-
+    .img-centro {
+        max-width: 95%;
+    }
+}
