@@ -87,7 +87,7 @@
   position: relative;
   display: block;
   margin: 0;
-  background: linear-gradient(135deg, #000000, #030c36);
+  background: linear-gradient(135deg, #000000, #122063);
   color: white;
   padding: 6rem 2rem;
   min-height: 100vh;
@@ -95,7 +95,7 @@
 
 /* ===== TÍTULO DA SEÇÃO TEC ===== */
 .tec {
-  color: #1273ce;
+  color: #007BFF;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   margin-bottom: 70px;
@@ -108,7 +108,7 @@
   content: '';
   width: 0%;
   height: 2px;
-  background: #1fb8ff; 
+  background: #0cceff; 
   display: block;
   transition: 0.5s;
   margin: 0 auto;
@@ -142,6 +142,7 @@
   justify-content: center;
   align-items: center;
   perspective: 1000px;
+  
 }
 
 .content {
@@ -155,7 +156,7 @@
 }
 
 .front, .back {
-  background-color: #151515;
+  background: url();
   position: absolute;
   width: 100%;
   height: 100%;
@@ -175,7 +176,7 @@
   position: absolute;
   content: '';
   display: block;
-  width: 160px;
+  width: 500px;
   height: 160%;
   background: linear-gradient(90deg, transparent, #08005e, #0f40e2, #1256af, #0b1079, transparent);
   animation: rotation_481 5000ms infinite linear;
@@ -227,6 +228,7 @@
   border-radius: 10px;
   backdrop-filter: blur(2px);
   width: fit-content;
+  
 }
 
 .description {
@@ -251,6 +253,150 @@
   50% { transform: translateY(10px); }
   100% { transform: translateY(0px); }
 }
+
+
+
+/* EVENTOS E PROMOÇÕES */
+ .eventos {
+  position: relative;
+  display: block;
+  margin: 0;
+  background: linear-gradient(135deg, #0a0c2c, #000000);
+  color: white;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+}
+
+/* ===== TÍTULO DA SEÇÃO EVENTOS ===== */
+.evento {
+  color: #007BFF;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.evento::before,
+.evento::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0cceff; 
+  display: block;
+  transition: 0.5s;
+  margin: 0 auto;
+}
+
+.evento:hover::after,
+.evento:hover::before {
+  width: 40%;
+}
+
+.carde {
+
+
+  width: 1100px;
+  height: 600px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1900px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  left: 425px;
+  margin: 0 auto;
+  
+    
+}
+
+
+.imge {
+  max-width: 100%;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.carde:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 133, 167, 0.2);
+}
+
+.carde__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.carde:hover .carde__content {
+  transform: rotateX(0deg);
+}
+
+.carde__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.carde:hover img {
+  scale: 0;
+}
+
+.carde__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 992px) {
