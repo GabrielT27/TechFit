@@ -96,42 +96,34 @@
 }
 
 .nos {
-
-    position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  position: relative;
+  display: block;
   margin: 0;
-  
   background: linear-gradient(135deg, #000000, #030c36);
-  flex-direction: column;
-  align-items: center;
-  min-height: 90vh;
   color: white;
-  padding: 2rem;
-
+  padding: 6rem 2rem;
+  min-height: 100vh;
 }
 
 /* CARD COM HOVER */ 
 .card {
   overflow: visible;
-  width: 230px;
-  height: 324px;
+  width: 100%;
+  aspect-ratio: 3/4;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 25px;
-  margin-top: -15px;
+  perspective: 1000px;
 }
 
 .content {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 300ms;
-  box-shadow: 0px 0px 10px 1px #000000ee;
-  border-radius: 5px;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(0, 89, 255, 0.15);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 89, 255, 0.1);
 }
 
 .front, .back {
@@ -183,13 +175,8 @@
 }
 
 @keyframes rotation_481 {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  0% {
-    transform: rotateZ(360deg);
-  }
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
 }
 
 .front {
@@ -201,10 +188,12 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .front-content .badge {
@@ -254,20 +243,20 @@
 
   .tec {
     color: #1273ce;
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  margin-bottom: 20px;
-  position: relative;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 70px;
+    position: relative;
   }
 
   .tec::before,
   .tec::after {
     content: '';
-  width: 0%;
-  height: 2px;
-  background: #00b7ff;
-  display: block;
-  transition: 0.5s;
+    width: 0%;
+    height: 2px;
+    background: #867b14;  /* mesma cor do .simples */
+    display: block;
+    transition: 0.5s;
   }
 
   .tec:hover::after,
@@ -276,11 +265,26 @@
   }
 
 .grid-container {
-  display: flex;              /* Coloca os cards lado a lado */
-  justify-content: center;    /* Centraliza horizontalmente */
-  align-items: flex-start;    /* Alinha os topos */
-  flex-wrap: wrap;            /* Faz quebrar linha se a tela for pequena */
-  gap: 20px;                  /* Espaçamento entre os cards */
-  margin: 40px auto;
-  max-width: 1200px;          /* Limita a largura total */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Ajusta para 2 colunas em telas médias */
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ajusta para 1 coluna em telas pequenas */
+@media (max-width: 576px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
