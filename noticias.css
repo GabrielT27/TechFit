@@ -101,18 +101,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #103358, #000000);
+  
+  background: linear-gradient(135deg, #000000, #030c36);
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+  color: white;
+  padding: 2rem;
 
 }
 
-/* From Uiverse.io by ElSombrero2 */ 
+/* CARD COM HOVER */ 
 .card {
   overflow: visible;
-  width: 190px;
-  height: 254px;
+  width: 230px;
+  height: 324px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  margin-top: -15px;
 }
 
 .content {
@@ -243,7 +253,7 @@
 }
 
   .tec {
-    color: #0040ff;
+    color: #1273ce;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   margin-bottom: 20px;
@@ -255,7 +265,7 @@
     content: '';
   width: 0%;
   height: 2px;
-  background: #061b86;
+  background: #00b7ff;
   display: block;
   transition: 0.5s;
   }
@@ -265,10 +275,12 @@
     width: 100%;
   }
 
-  .grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-items: center;
-  margin-top: 50px;
+.grid-container {
+  display: flex;              /* Coloca os cards lado a lado */
+  justify-content: center;    /* Centraliza horizontalmente */
+  align-items: flex-start;    /* Alinha os topos */
+  flex-wrap: wrap;            /* Faz quebrar linha se a tela for pequena */
+  gap: 20px;                  /* Espaçamento entre os cards */
+  margin: 40px auto;
+  max-width: 1200px;          /* Limita a largura total */
 }
