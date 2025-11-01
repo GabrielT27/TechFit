@@ -333,14 +333,20 @@
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
- 
+
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  background-image: url(close-up-de-homem-fazendo-treino-de-crossfit.jpg);
+
+   /* DEIXA O BACKGROUND IMAGEM RESPONSIVO/CENTRALIZADO */
+  background-image: url("Os\ Números\ do\ Brasileirão\ Time\ com\ Melhor\ Ataque\,\ Pior\ Defesa\ e\ Muito\ Mais\ \(5\).png");
+  background-size: cover;         /* Faz a imagem preencher sem distorcer */
+  background-position: center;    /* Centraliza a imagem */
+  background-repeat: no-repeat;   /* Evita repetição */
+  border-radius: 10px;            /* (opcional) bordas arredondadas */
+  overflow: hidden;               /* (opcional) evita que a imagem saia do card */
 }
+
 
 .carde:hover .carde__content {
   transform: rotateX(0deg);
@@ -364,6 +370,7 @@
   line-height: 1.4;
   background-color: rgba(0, 0, 0, 0.2); /* preto com 60% de transparência */
   border-radius: 10px;
+  
 }
 
 /* ===== FOOTER ===== */
