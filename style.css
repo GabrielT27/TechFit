@@ -236,9 +236,8 @@ img, .responsive-img {
 
 .card-img-dicas {
     width: 100%;
-    /* Use aspect-ratio for modern browsers so cards keep proportion and stay responsive */
-    aspect-ratio: 16 / 9;
-    max-height: 420px; /* fallback limit on very tall screens */
+    aspect-ratio: 4 / 9;
+    max-height: 420px; 
     object-fit: cover;
     display: block;
 }
@@ -364,4 +363,12 @@ footer {
     .copyright { padding: 10px 0; font-size: 12px; }
     .card-body-compact { padding: 15px; }
     .price-new { font-size: 1.3rem; }
+}
+
+.btn-primary{
+    background-color: #1255b9;
+}
+
+.btn-primary:hover {
+    background-color: #0c387a;
 }
