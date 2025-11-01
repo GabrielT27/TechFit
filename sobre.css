@@ -465,3 +465,11 @@ footer {
     }
 }
 
+.btn-primary{
+    background-color: #1255b9;
+}
+
+.btn-primary:hover {
+    background-color: #0c387a;
+}
+
