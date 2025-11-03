@@ -50,7 +50,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 60vh;
   margin: 0;
   padding: 0;
 
@@ -97,7 +97,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #103358, #000000);
@@ -116,7 +116,8 @@ button {
   position: absolute;
   top: 10px;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 20px;
+  font-size: 2.5rem;
 }
 
 
@@ -273,7 +274,7 @@ button:hover::after, button:hover::before {
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 20px auto; /* centraliza horizontalmente */
+  margin: 0px auto; /* centraliza horizontalmente */
   box-shadow: 0 0 10px rgba(0, 229, 255, 0.737);
 }
 
