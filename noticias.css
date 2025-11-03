@@ -116,7 +116,7 @@
 
 .tec:hover::after,
 .tec:hover::before {
-  width: 40%;
+  width: 60%;
 }
 
 /* ===== GRID DOS CARDS ===== */
@@ -125,7 +125,7 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
   align-items: start;
-  gap: 5rem;  /* Espaço entre os cards */
+  gap: 2.5rem;  /* Espaço entre os cards */
   padding: 3rem 2rem;
   margin: 0 auto;
   max-width: 1900px;
@@ -290,7 +290,7 @@
 
 .evento:hover::after,
 .evento:hover::before {
-  width: 40%;
+  width: 50%;
 }
 
 .carde {
