@@ -258,15 +258,25 @@ button:hover::after, button:hover::before {
     background: linear-gradient(135deg, #000000, #00173d);
 }
 
+
 .loc img {
-    max-width: 830px;
-    width: 100%;
-    height: auto;
-    max-height: 550px;
-    object-fit: contain;
-    border-radius: 20px;
-    margin-top: 10px;
+    width: 110vh;
+    max-width: 1200px; /* ou o tamanho que você achar ideal */
+    height: auto; /* mantém a proporção da imagem */
+    border-radius: 25px;
+   
+    display: block;
+    margin: 0 auto; /* centraliza a imagem */
 }
+
+.loc img:hover {
+     box-shadow: 0 9px 30px #00c6ff;
+     transition: 0.4s;
+
+}
+
+
+
 
 .perfil {
   width: 150px;
