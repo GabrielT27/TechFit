@@ -1,0 +1,551 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 7px solid transparent;
+  border-image: linear-gradient(90deg, #003366, #0066CC, #66CCFF, #0047AB, #1F51FF);
+  border-image-slice: 1;
+}
+
+.nav-container {
+  background-color: #000;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo-img {
+  border-radius: 20px;
+  height: 80px;
+  width: auto;
+}
+
+/* Links da navbar */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #ffffff !important;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #66CCFF !important;
+}
+
+/* ===== SEÇÃO FUNDO ===== */
+.fundo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.93)),
+              url("TechFit Loja.png") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ===== TÍTULO ===== */
+.simples {
+  color: #ffd700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.simples::before,
+.simples::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #867b14;
+  display: block;
+  transition: 0.5s;
+}
+
+.simples:hover::after,
+.simples:hover::before {
+  width: 100%;
+}
+
+/* ===== IMAGEM INAUGURAÇÃO ===== */
+.img-centro {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgb(255, 251, 0);
+  margin-top: 0px;
+}
+
+/* ===== SEÇÃO SOBRE ===== */
+.nos {
+  position: relative;
+  display: block;
+  margin: 0;
+  background: linear-gradient(135deg, #000000, #122063);
+  color: white;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+}
+
+/* ===== TÍTULO DA SEÇÃO TEC ===== */
+.tec {
+  color: #007BFF;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.tec::before,
+.tec::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0cceff; 
+  display: block;
+  transition: 0.5s;
+  margin: 0 auto;
+}
+
+.tec:hover::after,
+.tec:hover::before {
+  width: 60%;
+}
+
+/* ===== GRID DOS CARDS ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  align-items: start;
+  gap: 2.5rem;  /* Espaço entre os cards */
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 1900px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* CARD COM HOVER */
+.card {
+  overflow: visible;
+  width: 100%;
+  aspect-ratio: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(0, 89, 255, 0.15);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.front, .back {
+  background: url();
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 500px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #08005e, #0f40e2, #1256af, #0b1079, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+  
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
+}
+
+
+
+/* EVENTOS E PROMOÇÕES */
+ .eventos {
+  position: relative;
+  display: block;
+  margin: 0;
+  background: linear-gradient(135deg, #0a0c2c, #000000);
+  color: white;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+}
+
+/* ===== TÍTULO DA SEÇÃO EVENTOS ===== */
+.evento {
+  color: #007BFF;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.evento::before,
+.evento::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0cceff; 
+  display: block;
+  transition: 0.5s;
+  margin: 0 auto;
+}
+
+.evento:hover::after,
+.evento:hover::before {
+  width: 50%;
+}
+
+.carde {
+
+
+  width: 1100px;
+  height: 600px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1900px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  left: 425px;
+  margin: 0 auto;
+  
+    
+}
+
+
+.imge {
+  max-width: 100%;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+
+.carde:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 133, 167, 0.2);
+}
+
+.carde__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+   /* DEIXA O BACKGROUND IMAGEM RESPONSIVO/CENTRALIZADO */
+  background-image: url("Os\ Números\ do\ Brasileirão\ Time\ com\ Melhor\ Ataque\,\ Pior\ Defesa\ e\ Muito\ Mais\ \(5\).png");
+  background-size: cover;         /* Faz a imagem preencher sem distorcer */
+  background-position: center;    /* Centraliza a imagem */
+  background-repeat: no-repeat;   /* Evita repetição */
+  border-radius: 10px;            /* (opcional) bordas arredondadas */
+  overflow: hidden;               /* (opcional) evita que a imagem saia do card */
+}
+
+
+.carde:hover .carde__content {
+  transform: rotateX(0deg);
+}
+
+.carde__title {
+  margin: 0;
+  font-size: 44px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.carde:hover img {
+  scale: 0;
+}
+
+.carde__description {
+  margin: 20px 40px 20px;
+  font-size: 19px;
+  color: #ffffff;
+  line-height: 1.4;
+  background-color: rgba(0, 0, 0, 0.2); /* preto com 60% de transparência */
+  border-radius: 10px;
+  
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 30px 0 0 0;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.mensagem {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+.contato {
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #aaa;
+    padding: 15px 0;
+    margin: 0;
+}
+
+/* ===== SEPARADORES ===== */
+.separator {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #00c6ff, transparent);
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* ===== ÍCONES SOCIAIS ===== */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0 30px 0;
+}
+
+.social-icons .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.social-icons .facebook { background: #1877f2; }
+.social-icons .facebook:hover { background: #145dbf; transform: scale(1.1); }
+
+.social-icons .instagram { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); }
+.social-icons .instagram:hover { transform: scale(1.1); filter: brightness(1.1); }
+
+.social-icons .whatsapp { background: #25d366; }
+.social-icons .whatsapp:hover { background: #1da851; transform: scale(1.1); }
+
+.social-icons .twitter { background: #018bc2; }
+.social-icons .twitter:hover { background: #0b679c; transform: scale(1.1); }
+
+.social-icons .youtube { background: #d81c1c; }
+.social-icons .youtube:hover { background: #860e0e; transform: scale(1.1); }
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1200px) {
+    .card-container-dicas { gap: 25px; }
+    .card-dicas { max-width: 280px; }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav { text-align: center; }
+    .navbar-nav .nav-link { font-size: 1.1rem; }
+    .logo-img { margin-left: 20px; }
+    .card-dicas { max-width: 250px; }
+    .card-button-dicas { padding: 6px 25px; font-size: 0.85rem; }
+}
+
+@media (max-width: 768px) {
+    .card-container-dicas { flex-direction: column; gap: 20px; }
+    .card-dicas { max-width: 100%; }
+    .social-icons { gap: 12px; }
+    .social-icons .icon { width: 40px; height: 40px; font-size: 16px; }
+    .plans-section { padding: 30px 0; }
+    .section-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img { width: 120px; height: 60px; margin-left: 10px; }
+    .navbar-nav .nav-link { font-size: 1rem; }
+    .nav-container { height: 90px; padding: 0 15px; }
+    .social-icons { gap: 10px; flex-wrap: wrap; }
+    .social-icons .icon { width: 38px; height: 38px; font-size: 15px; }
+    footer { padding: 20px 0 0 0; }
+    .copyright { padding: 10px 0; font-size: 12px; }
+    .card-body-compact { padding: 15px; }
+    .price-new { font-size: 1.3rem; }
+}
+
+
+.btn-primary{
+    background-color: #1255b9;
+}
+
+.btn-primary:hover {
+    background-color: #0c387a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .img-centro {
+    max-width: 95%;
+  }
+}

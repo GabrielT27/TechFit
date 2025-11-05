@@ -1,0 +1,486 @@
+.navbar {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 7px solid transparent;
+    border-image: linear-gradient(90deg, #003366, #0066CC, #66CCFF, #0047AB, #1F51FF);
+    border-image-slice: 1;
+}
+
+/* Regras globais para imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.nav-container {
+    background-color: #000000;
+    height: 110px;
+    padding: 0 20px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.25rem;
+    color: #ffffff !important;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #66CCFF !important;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+}
+
+.logo-img {
+    border-radius: 20px;
+    margin-left: 40px;
+    margin-top: -10px;
+}
+
+
+.fundo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  margin: 0;
+  padding: 0;
+
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.932)),
+    url('ginasio-com-equipamento-de-ciclismo-indoor.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+.title {
+  font-size: 2.5rem;  /* aumenta o tamanho do título */
+  font-weight: 700;
+  text-align: center;
+}
+
+.title span::after {
+  content: 'TUDO';
+  animation: words 8s infinite;
+}
+
+@keyframes words {
+  0%, 33% {
+    content: 'FIT';
+    color: rgb(0, 47, 255);
+  }
+
+  34%, 66% {
+    content: 'SAÚDE';
+    color: #009ccc;
+  }
+
+  67%, 100% {
+    content: 'TUDO';
+    color: rgb(0, 238, 255);
+  }
+}
+
+.nos {
+
+    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #103358, #000000);
+
+}
+
+
+button {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+
+
+button::before {
+  margin-left: auto;
+}
+
+button::after, button::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #2295ca;
+  display: block;
+  transition: 0.5s;
+}
+
+button:hover::after, button:hover::before {
+  width: 100%;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.image-container:hover {
+    transform: scale(1.02);
+}
+
+.image-container img {
+    max-width: 680px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+    object-fit: cover;
+}
+
+.image-container:hover img {
+    filter: brightness(0.7);
+}
+        .hover-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.0);
+            opacity: 0;
+            transition: all 0.4s ease;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        
+        .image-container:hover .hover-text {
+            opacity: 1; 
+  backdrop-filter: blur(8px);    
+        }
+        
+        
+        .text-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            transform: translateY(20px);
+            transition: transform 0.4s ease 0.1s;
+            max-width: 80%;
+        }
+        
+        .image-container:hover .text-description {
+            transform: translateY(0);
+        }
+        
+        .cta-button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #094880;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transform: translateY(20px);
+            transition: all 0.4s ease 0.2s;
+            opacity: 0;
+        }
+        
+        .image-container:hover .cta-button {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .cta-button:hover {
+            background: #071160;
+            transform: scale(1.05);
+        }
+
+.valores {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #000000);
+}
+
+/* Estilos para os cards */
+.card {
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.loc {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #00173d);
+}
+
+
+.loc img {
+    width: 110vh;
+    max-width: 1200px; /* ou o tamanho que você achar ideal */
+    height: auto; /* mantém a proporção da imagem */
+    border-radius: 25px;
+   
+    display: block;
+    margin: 0 auto; /* centraliza a imagem */
+}
+
+.loc img:hover {
+     box-shadow: 0 9px 30px #00c6ff;
+     transition: 0.4s;
+
+}
+
+
+
+
+.perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0px auto; /* centraliza horizontalmente */
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.737);
+}
+
+.perfil:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 0, 200, 0.808);
+  transition: all 0.3s ease;
+
+}
+.dev-descricao {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-top: 10px;
+}
+
+
+
+
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 30px 0 0 0;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.mensagem {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+.contato {
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #aaa;
+    padding: 15px 0;
+    margin: 0;
+}
+
+/* ===== SEPARADORES ===== */
+.separator {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #00c6ff, transparent);
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* ===== ÍCONES SOCIAIS ===== */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0 30px 0;
+}
+
+.social-icons .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.social-icons .facebook { background: #1877f2; }
+.social-icons .facebook:hover { background: #145dbf; transform: scale(1.1); }
+
+.social-icons .instagram { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); }
+.social-icons .instagram:hover { transform: scale(1.1); filter: brightness(1.1); }
+
+.social-icons .whatsapp { background: #25d366; }
+.social-icons .whatsapp:hover { background: #1da851; transform: scale(1.1); }
+
+.social-icons .twitter { background: #018bc2; }
+.social-icons .twitter:hover { background: #0b679c; transform: scale(1.1); }
+
+.social-icons .youtube { background: #d81c1c; }
+.social-icons .youtube:hover { background: #860e0e; transform: scale(1.1); }
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1200px) {
+    .image-container {
+        max-width: 90%;
+    }
+    .card-container-dicas {
+        gap: 25px;
+    }
+    .card-dicas {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+    }
+    .logo-img {
+        margin-left: 20px;
+    }
+    .image-container img {
+        max-width: 100%;
+    }
+    .loc img {
+        max-height: 400px;
+    }
+    .card-img-top {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 95%;
+    }
+    .card-container-dicas {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card-dicas {
+        max-width: 100%;
+    }
+    .social-icons {
+        gap: 12px;
+    }
+    .social-icons .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-container {
+        max-width: 100%;
+    }
+    .navbar-brand img {
+        width: 120px;
+        height: 60px;
+        margin-left: 10px;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+    .nav-container {
+        height: 90px;
+        padding: 0 15px;
+    }
+    .social-icons {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .social-icons .icon {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+    .footer {
+        padding: 20px 0 0 0;
+    }
+    .copyright {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+    .loc img {
+        max-height: 300px;
+    }
+    .card-img-top {
+        height: 160px;
+    }
+}
+
+.btn-primary{
+    background-color: #1255b9;
+}
+
+.btn-primary:hover {
+    background-color: #0c387a;
+}
+
