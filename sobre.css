@@ -50,7 +50,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 80vh;
   margin: 0;
   padding: 0;
 
@@ -97,7 +97,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 110vh;
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #103358, #000000);
@@ -143,7 +143,7 @@ button:hover::after, button:hover::before {
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s ease;
-    max-width: 850px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
@@ -267,6 +267,7 @@ button:hover::after, button:hover::before {
    
     display: block;
     margin: 0 auto; /* centraliza a imagem */
+    margin-top: 90px;
 }
 
 .loc img:hover {
@@ -277,20 +278,31 @@ button:hover::after, button:hover::before {
 
 
 
-
+.perfilback {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #00173d);
+}
 .perfil {
-  width: 150px;
-  height: 150px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0px auto; /* centraliza horizontalmente */
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.737);
+  display: block;              
+  margin: 0 auto;              
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.737);
+  object-fit: cover;           /* mantém a imagem bem cortada dentro do círculo */
+  margin-top: 70px;
 }
 
+
 .perfil:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(255, 0, 200, 0.808);
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(255, 0, 123, 0.808);
   transition: all 0.3s ease;
 
 }
@@ -300,7 +312,7 @@ button:hover::after, button:hover::before {
   line-height: 1.6;
   font-size: 1rem;
   color: #e0e0e0;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 
