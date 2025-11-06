@@ -1,3 +1,11 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .perfil {
   border-radius: 50%;
   display: block;              
@@ -33,3 +41,208 @@ button:hover {
   background-color: rgb(0, 179, 255);
   transition: background-color 0.5s;
 }
+
+.nos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #103358, #000000);
+}
+
+.btn {
+  position: absolute; 
+  top: 15px;
+  left: 15px;
+  z-index: 1050;
+}
+
+.tec {
+  position: absolute;
+  top: 20px; /* distância do topo */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #007BFF;
+  font-weight: 800;
+  margin: 0;
+}
+
+
+.tec::before,
+.tec::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0cceff; 
+  display: block;
+  transition: 0.5s;
+  margin: 0 auto;
+}
+
+.tec:hover::after,
+.tec:hover::before {
+  width: 100%;
+}
+
+/* From Uiverse.io by Vosoone */ 
+.crypto-card {
+  max-width: 360px;
+  width: 90%;
+  padding: 20px;
+  border-radius: 35px;
+  background: #000;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.open {
+  font-size: 0.85em;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.open:hover {
+  color: #fff;
+}
+
+.crypto-switch {
+  position: relative;
+  display: flex;
+  background: #222;
+  border-radius: 20px;
+  padding: 4px;
+  gap: 8px;
+  margin-bottom: 16px;
+  user-select: none;
+}
+.crypto-switch input {
+  display: none;
+}
+.crypto-switch label {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 16px;
+  cursor: pointer;
+  color: #cccccc;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: color 0.3s;
+  font-size: 0.9em;
+}
+.crypto-switch input:checked + label {
+  color: #ffffff;
+}
+
+.crypto-switch .slider {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  width: calc((100% - 24px) / 4);
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(0.5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.2);
+}
+.crypto-switch input:hover + label {
+  color: #ffffff;
+}
+#bitcoin:checked ~ .slider {
+  transform: translateX(0%);
+}
+#ethereum:checked ~ .slider {
+  transform: translateX(105%);
+}
+#solana:checked ~ .slider {
+  transform: translateX(214%);
+}
+#tether:checked ~ .slider {
+  transform: translateX(323%);
+}
+
+.price-infos {
+  margin-bottom: 16px;
+}
+.price-info .price {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.price-info .stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+.price-info .change {
+  color: rgb(0, 195, 255);
+  font-weight: bold;
+}
+
+.chart {
+  height: 90px;
+  background: #1b1b1b;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.chart svg {
+  width: 100%;
+  height: 100%;
+  display: none;
+  transform: translateX(2px) scale(1.05);
+}
+.chart path {
+  stroke: rgb(0, 225, 255);
+  stroke-width: 0.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 3s forwards;
+  fill: rgba(0, 56, 160, 0.765);
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.crypto-card:has(#bitcoin:checked) .chart #chart-bitcoin,
+.crypto-card:has(#ethereum:checked) .chart #chart-ethereum,
+.crypto-card:has(#solana:checked) .chart #chart-solana,
+.crypto-card:has(#tether:checked) .chart #chart-tether {
+  display: block;
+}
+
+.price-info {
+  display: none;
+}
+.crypto-card:has(#bitcoin:checked) .price-info.bitcoin,
+.crypto-card:has(#ethereum:checked) .price-info.ethereum,
+.crypto-card:has(#solana:checked) .price-info.solana,
+.crypto-card:has(#tether:checked) .price-info.tether {
+  display: block;
+}
+
+
