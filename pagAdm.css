@@ -167,16 +167,20 @@ button:hover {
 .crypto-switch input:hover + label {
   color: #ffffff;
 }
-#bitcoin:checked ~ .slider {
+#bitcoin-1:checked ~ .slider,
+#bitcoin-2:checked ~ .slider {
   transform: translateX(0%);
 }
-#ethereum:checked ~ .slider {
+#ethereum-1:checked ~ .slider,
+#ethereum-2:checked ~ .slider {
   transform: translateX(105%);
 }
-#solana:checked ~ .slider {
+#solana-1:checked ~ .slider,
+#solana-2:checked ~ .slider {
   transform: translateX(214%);
 }
-#tether:checked ~ .slider {
+#tether-1:checked ~ .slider,
+#tether-2:checked ~ .slider {
   transform: translateX(323%);
 }
 
@@ -228,20 +232,37 @@ button:hover {
   }
 }
 
-.crypto-card:has(#bitcoin:checked) .chart #chart-bitcoin,
-.crypto-card:has(#ethereum:checked) .chart #chart-ethereum,
-.crypto-card:has(#solana:checked) .chart #chart-solana,
-.crypto-card:has(#tether:checked) .chart #chart-tether {
+.crypto-card:has(#bitcoin-1:checked) .chart #chart-bitcoin-1,
+.crypto-card:has(#ethereum-1:checked) .chart #chart-ethereum-1,
+.crypto-card:has(#solana-1:checked) .chart #chart-solana-1,
+.crypto-card:has(#tether-1:checked) .chart #chart-tether-1,
+.crypto-card:has(#bitcoin-2:checked) .chart #chart-bitcoin-2,
+.crypto-card:has(#ethereum-2:checked) .chart #chart-ethereum-2,
+.crypto-card:has(#solana-2:checked) .chart #chart-solana-2,
+.crypto-card:has(#tether-2:checked) .chart #chart-tether-2 {
   display: block;
 }
 
 .price-info {
   display: none;
 }
-.crypto-card:has(#bitcoin:checked) .price-info.bitcoin,
-.crypto-card:has(#ethereum:checked) .price-info.ethereum,
-.crypto-card:has(#solana:checked) .price-info.solana,
-.crypto-card:has(#tether:checked) .price-info.tether {
+.crypto-card:has(#bitcoin-1:checked) .price-info.bitcoin-1,
+.crypto-card:has(#ethereum-1:checked) .price-info.ethereum-1,
+.crypto-card:has(#solana-1:checked) .price-info.solana-1,
+.crypto-card:has(#tether-1:checked) .price-info.tether-1,
+.crypto-card:has(#bitcoin-2:checked) .price-info.bitcoin-2,
+.crypto-card:has(#ethereum-2:checked) .price-info.ethereum-2,
+.crypto-card:has(#solana-2:checked) .price-info.solana-2,
+.crypto-card:has(#tether-2:checked) .price-info.tether-2 {
+  display: block;
+}
+.crypto-card:has(#ethereum-1:checked) .price-info.ethereum,
+.crypto-card:has(#solana-1:checked) .price-info.solana,
+.crypto-card:has(#tether-1:checked) .price-info.tether,
+.crypto-card:has(#bitcoin-2:checked) .price-info.bitcoin,
+.crypto-card:has(#ethereum-2:checked) .price-info.ethereum,
+.crypto-card:has(#solana-2:checked) .price-info.solana,
+.crypto-card:has(#tether-2:checked) .price-info.tether {
   display: block;
 }
 
