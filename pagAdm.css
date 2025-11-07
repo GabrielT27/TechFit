@@ -167,6 +167,8 @@ button:hover {
 .crypto-switch input:hover + label {
   color: #ffffff;
 }
+
+/* FAZENDO O SEGUNDO CARD COM AS MÉTRICAS (mesma métrica com ids de cards diferentes */
 #bitcoin-1:checked ~ .slider,
 #bitcoin-2:checked ~ .slider {
   transform: translateX(0%);
@@ -183,6 +185,7 @@ button:hover {
 #tether-2:checked ~ .slider {
   transform: translateX(323%);
 }
+/* FECHANDO AQUI */
 
 .price-infos {
   margin-bottom: 16px;
@@ -232,6 +235,8 @@ button:hover {
   }
 }
 
+
+/* CRIANDO OS CARDS E MESES ATRAVÉS DOS ID'S */
 .crypto-card:has(#bitcoin-1:checked) .chart #chart-bitcoin-1,
 .crypto-card:has(#ethereum-1:checked) .chart #chart-ethereum-1,
 .crypto-card:has(#solana-1:checked) .chart #chart-solana-1,
@@ -265,5 +270,5 @@ button:hover {
 .crypto-card:has(#tether-2:checked) .price-info.tether {
   display: block;
 }
-
+/* ACABA AQUI */
 
