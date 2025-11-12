@@ -4,9 +4,9 @@
 CREATE DATABASE TechFit;
 USE TechFit;
 
--- ==========================
+
 -- TABELA: PLANOS
--- ==========================
+
 CREATE TABLE PLANOS (
     id_plano INT AUTO_INCREMENT PRIMARY KEY,
     tipo VARCHAR(60),
@@ -14,9 +14,8 @@ CREATE TABLE PLANOS (
     valor DECIMAL(10,2)
 );
 
--- ==========================
 -- TABELA: ALUNOS
--- ==========================
+
 CREATE TABLE ALUNOS (
     id_aluno INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
@@ -32,9 +31,9 @@ CREATE TABLE ALUNOS (
     FOREIGN KEY (id_plano) REFERENCES PLANOS(id_plano)
 );
 
--- ==========================
+
 -- TABELA: PAGAMENTOS
--- ==========================
+
 CREATE TABLE PAGAMENTOS (
     id_pagamento INT AUTO_INCREMENT PRIMARY KEY,
     tipo_pagamento VARCHAR(40),
@@ -44,9 +43,9 @@ CREATE TABLE PAGAMENTOS (
     FOREIGN KEY (id_aluno) REFERENCES ALUNOS(id_aluno)
 );
 
--- ==========================
+
 -- TABELA: FUNCIONARIO
--- ==========================
+
 CREATE TABLE FUNCIONARIO (
     id_func INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50),
@@ -62,9 +61,9 @@ CREATE TABLE FUNCIONARIO (
     id_modalidade INT
 );
 
--- ==========================
+
 -- TABELA: MODALIDADES
--- ==========================
+
 CREATE TABLE MODALIDADES (
     id_modalidade INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(80),
@@ -73,9 +72,9 @@ CREATE TABLE MODALIDADES (
     FOREIGN KEY (id_func) REFERENCES FUNCIONARIO(id_func)
 );
 
--- ==========================
+
 -- TABELA: UNIDADES
--- ==========================
+
 CREATE TABLE UNIDADES (
     id_und INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(60),
@@ -84,10 +83,10 @@ CREATE TABLE UNIDADES (
     FOREIGN KEY (id_func) REFERENCES FUNCIONARIO(id_func)
 );
 
--- ==========================
+
 -- TABELA: PERTENCEM
--- (Relacionamento N:N entre UNIDADES e FUNCIONARIO)
--- ==========================
+
+
 CREATE TABLE PERTENCEM (
     id_und INT,
     id_func INT,
@@ -96,10 +95,11 @@ CREATE TABLE PERTENCEM (
     FOREIGN KEY (id_func) REFERENCES FUNCIONARIO(id_func)
 );
 
--- ==========================
+
+
 -- TABELA: EXECUTADAS
--- (Relacionamento N:N entre MODALIDADES e FUNCIONARIO)
--- ==========================
+
+
 CREATE TABLE EXECUTADAS (
     id_modalidade INT,
     id_func INT,
@@ -108,10 +108,10 @@ CREATE TABLE EXECUTADAS (
     FOREIGN KEY (id_func) REFERENCES FUNCIONARIO(id_func)
 );
 
--- ==========================
+
 -- TABELA: EXISTEM
 -- (Relacionamento N:N entre PLANOS e UNIDADES)
--- ==========================
+
 CREATE TABLE EXISTEM (
     id_plano INT,
     id_und INT,
@@ -120,10 +120,9 @@ CREATE TABLE EXISTEM (
     FOREIGN KEY (id_und) REFERENCES UNIDADES(id_und)
 );
 
--- ==========================
+
 -- TABELA: REALIZAM
--- (Relacionamento N:N entre ALUNOS e PAGAMENTOS)
--- ==========================
+
 CREATE TABLE REALIZAM (
     id_pagamento INT,
     id_aluno INT,
