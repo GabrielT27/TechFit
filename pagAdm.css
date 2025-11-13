@@ -51,6 +51,14 @@ button:hover {
   background: linear-gradient(135deg, #103358, #000000);
 }
 
+/* Espaçamento entre os cards: usa gap para controlar o espaçamento quando
+   os .crypto-card são colocados em um flex container. Também permite quebra
+   de linha (flex-wrap) para responsividade. */
+.nos {
+  gap: 80px; /* ajuste o valor conforme necessário (ex: 16px, 24px) */
+  flex-wrap: wrap;
+}
+
 .btn {
   position: absolute; 
   top: 15px;
@@ -87,13 +95,14 @@ button:hover {
 
 /* From Uiverse.io by Vosoone */ 
 .crypto-card {
-  max-width: 360px;
-  width: 90%;
+  max-width: 560px;
+  width: 100%;
   padding: 20px;
   border-radius: 35px;
   background: #000;
   color: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-top: 90px;
 }
 
 .header {
@@ -125,6 +134,7 @@ button:hover {
   gap: 8px;
   margin-bottom: 16px;
   user-select: none;
+  margin: 5px;
 }
 .crypto-switch input {
   display: none;
