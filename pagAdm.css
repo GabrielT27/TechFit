@@ -47,7 +47,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 150vh;
   background: linear-gradient(135deg, #103358, #000000);
 }
 
@@ -73,7 +73,7 @@ button:hover {
   transform: translateX(-50%);
   color: #007BFF;
   font-weight: 800;
-  margin: 0;
+  
 }
 
 
@@ -95,31 +95,36 @@ button:hover {
 
 /* From Uiverse.io by Vosoone */ 
 .crypto-card {
-  max-width: 560px;
+  max-width: 510px;
   width: 100%;
   padding: 20px;
   border-radius: 35px;
   background: #000;
   color: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  margin-top: 90px;
+  box-shadow: 0 10px 30px rgba(3, 122, 201, 0.493);
+  margin-top: 195px;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center; /* centraliza o conteúdo */
+  position: relative;      /* permite posicionar a .open */
   margin-bottom: 20px;
 }
+
 .logo {
   font-weight: bold;
   font-size: 1.2em;
 }
+
 .open {
+  position: absolute; 
+  right: 0;                 /* joga pra direita */
   font-size: 0.85em;
   color: #888;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 .open:hover {
   color: #fff;
@@ -162,11 +167,11 @@ button:hover {
   position: absolute;
   top: 4px;
   bottom: 4px;
-  width: calc((100% - 24px) / 4);
-  background: rgba(255, 255, 255, 0.4);
+  width: calc((100% - 33px) / 4);
+  background: rgba(80, 156, 255, 0.4);
   -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(0.5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(0.2px);
+  border: 1px solid rgba(0, 153, 255, 0.664);
   border-radius: 16px;
   z-index: 1;
   transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -282,3 +287,59 @@ button:hover {
 }
 /* ACABA AQUI */
 
+
+
+
+.circle-container {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  margin: 40px 0;
+}
+
+.circle-card {
+  text-align: center;
+}
+
+.label {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      #278ee2 calc(var(--percent) * 1%),
+      #e8e8e8 0
+    );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .4s ease, filter .4s ease;
+  cursor: pointer;
+}
+
+.circle:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0px 0px 10px rgba(0, 204, 255, 0.541));
+}
+
+.inner {
+  width: 85px;
+  height: 85px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+}
