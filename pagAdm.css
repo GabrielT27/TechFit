@@ -55,7 +55,7 @@ button:hover {
    os .crypto-card são colocados em um flex container. Também permite quebra
    de linha (flex-wrap) para responsividade. */
 .nos {
-  gap: 100px; /* ajuste o valor conforme necessário (ex: 16px, 24px) */
+  gap: 5rem; /* ajuste o valor conforme necessário (ex: 16px, 24px) */
   flex-wrap: wrap;
 }
 .noss {
@@ -84,11 +84,12 @@ button:hover {
 
 .tec {
   position: absolute;
-  top: 20px; /* distância do topo */
+  top: 0REM; /* distância do topo */
   left: 50%;
   transform: translateX(-50%);
   color: #007BFF;
   font-weight: 800;
+  font-size: 3rem;
   
 }
 
@@ -111,16 +112,15 @@ button:hover {
 
 /* From Uiverse.io by Vosoone */ 
 .crypto-card {
-  max-width: 510px;
-  width: 100%;
-  padding: 40px;
-  border-radius: 35px;
+  width: min(100%, 580px);      /* Limita sem quebrar */
+  padding: 2.5rem;              /* Escala melhor que px */
+  border-radius: 2rem;
   background: #000;
   color: #fff;
-  box-shadow: 0 10px 30px rgba(3, 122, 201, 0.493);
-  margin-top: 195px;
+  box-shadow: 0 10px 30px rgba(3, 122, 201, 0.45);
+  margin: 3rem auto 0;          /* Centraliza e deixa espaço de cima */
+  margin-top: 12rem;
 }
-
 .header {
   display: flex;
   align-items: center;
@@ -150,9 +150,9 @@ button:hover {
   position: relative;
   display: flex;
   background: #222;
-  border-radius: 20px;
-  padding: 4px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  gap: 0.8rem;
   margin-bottom: 16px;
   user-select: none;
   margin: 5px;
@@ -171,7 +171,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 0.6rem;
   transition: color 0.3s;
   font-size: 0.9em;
 }
@@ -183,7 +183,7 @@ button:hover {
   position: absolute;
   top: 4px;
   bottom: 4px;
-  width: calc((100% - 33px) / 4);
+  width: calc((100% - 40px) / 4);
   background: rgba(80, 156, 255, 0.4);
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(0.2px);
@@ -237,7 +237,7 @@ button:hover {
 }
 
 .chart {
-  height: 90px;
+  height: 10rem;
   background: #1b1b1b;
   border-radius: 12px;
   position: relative;
@@ -340,7 +340,7 @@ button:hover {
   border-radius: 50%;
   background: conic-gradient(
     #0099ff calc(var(--percent) * 3.6deg),
-    #6d6d6d 0deg
+    #333333 0deg
   );
   display: flex;
   justify-content: center;
@@ -368,3 +368,78 @@ button:hover {
   color: #0099ff;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .nos {
+    padding: 70px 15px 30px;
+  }
+
+  .tec {
+    font-size: 1.5rem;
+  }
+
+  .crypto-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .circle-container {
+    gap: 25px;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .inner {
+    width: 108px;
+    height: 108px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nos {
+    padding: 70px 10px 20px;
+  }
+
+  .button {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .tec {
+    font-size: 1.2rem;
+  }
+
+  .circle-container {
+    gap: 15px;
+    padding: 20px 10px;
+  }
+}
