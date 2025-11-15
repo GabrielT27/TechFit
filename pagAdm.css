@@ -55,7 +55,23 @@ button:hover {
    os .crypto-card são colocados em um flex container. Também permite quebra
    de linha (flex-wrap) para responsividade. */
 .nos {
-  gap: 80px; /* ajuste o valor conforme necessário (ex: 16px, 24px) */
+  gap: 100px; /* ajuste o valor conforme necessário (ex: 16px, 24px) */
+  flex-wrap: wrap;
+}
+.noss {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  background: linear-gradient(235deg, #000000, #103358);
+}
+
+/* Espaçamento entre os cards: usa gap para controlar o espaçamento quando
+   os .crypto-card são colocados em um flex container. Também permite quebra
+   de linha (flex-wrap) para responsividade. */
+.noss {
+  gap: 100px; /* ajuste o valor conforme necessário (ex: 16px, 24px) */
   flex-wrap: wrap;
 }
 
@@ -97,7 +113,7 @@ button:hover {
 .crypto-card {
   max-width: 510px;
   width: 100%;
-  padding: 20px;
+  padding: 40px;
   border-radius: 35px;
   background: #000;
   color: #fff;
@@ -297,6 +313,7 @@ button:hover {
   align-items: center;
   font-family: "Inter", sans-serif;
   margin: 40px 0;
+  margin-top: 0px;
 }
 
 .circle-card {
@@ -304,7 +321,7 @@ button:hover {
 }
 
 .label {
-  margin-top: 18px;
+  margin-top: 10px;
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
@@ -343,3 +360,5 @@ button:hover {
   font-weight: 700;
   color: #333333;
 }
+
+
