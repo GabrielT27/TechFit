@@ -47,7 +47,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150vh;
+  height: 100vh;
   background: linear-gradient(135deg, #103358, #000000);
 }
 
@@ -63,7 +63,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150vh;
+  height: 100vh;
   background: linear-gradient(235deg, #000000, #103358);
 }
 
@@ -312,53 +312,59 @@ button:hover {
   justify-content: center;
   align-items: center;
   font-family: "Inter", sans-serif;
-  margin: 40px 0;
-  margin-top: 0px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .circle-card {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .label {
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
 }
 
 .circle {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  background:
-    conic-gradient(
-      #278ee2 calc(var(--percent) * 1%),
-      #e8e8e8 0
-    );
+  background: conic-gradient(
+    #0099ff calc(var(--percent) * 3.6deg),
+    #6d6d6d 0deg
+  );
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform .4s ease, filter .4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
   cursor: pointer;
+  padding: 4px;
 }
 
 .circle:hover {
-  transform: scale(1.08);
-  filter: drop-shadow(0px 0px 10px rgba(0, 204, 255, 0.541));
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 15px rgba(0, 153, 255, 0.8));
 }
 
 .inner {
-  width: 85px;
-  height: 85px;
-  background: #fff;
+  width: 128px;
+  height: 128px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
-  color: #333333;
+  color: #0099ff;
 }
-
 
