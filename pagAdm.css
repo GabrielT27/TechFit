@@ -61,11 +61,14 @@ button:hover {
 .noss {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;   /* empilha o h1 e o card certinho */
+  justify-content: flex-start; /* começa de cima pra não esmagar nada */
   align-items: center;
-  height: 100vh;
+  min-height: 100dvh;       /* resolução do corte */
+  padding: 4rem 0;          /* espaço para respirar */
   background: linear-gradient(235deg, #000000, #103358);
 }
+
 
 /* Espaçamento entre os cards: usa gap para controlar o espaçamento quando
    os .crypto-card são colocados em um flex container. Também permite quebra
@@ -88,8 +91,8 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   color: #007BFF;
-  font-weight: 800;
-  font-size: 3rem;
+  font-weight: 1000;
+  font-size: 4rem;
   
 }
 
@@ -110,17 +113,45 @@ button:hover {
   width: 100%;
 }
 
+
+.func {
+  position: absolute;
+  top: 20REM; /* distância do topo */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffc400;
+  font-weight: 1000;
+  font-size: 4rem;
+  
+}
+
+
+.func::before,
+.func::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #ca9400; 
+  display: block;
+  transition: 0.5s;
+  margin: 0 auto;
+}
+
+.func:hover::after,
+.func:hover::before {
+  width: 100%;
+}
 /* From Uiverse.io by Vosoone */ 
 .crypto-card {
-  width: min(100%, 580px);      /* Limita sem quebrar */
-  padding: 2.5rem;              /* Escala melhor que px */
+  width: min(100%, 580px);
+  padding: 2.5rem;
   border-radius: 2rem;
   background: #000;
   color: #fff;
   box-shadow: 0 10px 30px rgba(3, 122, 201, 0.45);
-  margin: 3rem auto 0;          /* Centraliza e deixa espaço de cima */
-  margin-top: 12rem;
+  margin: 18rem auto 0;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -318,6 +349,7 @@ button:hover {
   width: 100%;
   position: relative;
   z-index: 10;
+  margin-top: 6rem;
 }
 
 .circle-card {
@@ -368,6 +400,202 @@ button:hover {
   color: #0099ff;
 }
 
+
+
+
+
+/* trofeu */
+/* ============================
+   CARD PRINCIPAL (CONTAINER)
+============================ */
+.cards {
+  
+  width: 580px;
+  height: 500px;                     /* ➜ maior */
+  transition: 0.4s ease;
+  background: none;
+  overflow: visible;                 /* ➜ deixa animação aparecer melhor */
+
+  cursor: pointer;
+  margin-top: 34rem;
+}
+
+.cards:hover {
+  transform: scale(1.03);            /* ➜ efeito elegante */
+}
+
+/* ============================
+   CARD SUPERIOR (outlinePage)
+============================ */
+.outlinePage {
+  position: relative;
+  background: linear-gradient(45deg, #fff7e0, #ffd26b);
+  width: 100%;
+  height: 300px;                     /* ➜ maior */
+  border-radius: 28px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(180, 150, 94, 0.35);
+  transition: 0.4s ease;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cards:hover .outlinePage {
+  box-shadow: 0 15px 35px #b1985e;
+  transform: translateY(-8px);
+}
+
+/* ============================
+   CARD INFERIOR (detailPage)
+============================ */
+.detailPage {
+  position: absolute;
+  width: 100%;
+  height: 15rem;                     /* ➜ maior */
+  background: white;
+  bottom: 0px;                     /* ➜ sai mais suave */
+  border-radius: 0 0 38px 38px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  display: none;
+  padding: 1.0rem;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.4s ease;
+  z-index: 1;
+}
+
+.cards:hover .detailPage {
+  display: flex;
+  bottom: 0px;                     /* ➜ animação descendo */
+}
+
+/* ============================
+   ELEMENTOS INTERNOS
+============================ */
+
+.splitLine {
+  position: absolute;
+  width: 230px;
+  height: 18px;
+  top: 150px;
+  background-image: linear-gradient(to right,
+    transparent 10%,
+    #ffe8a0 20%,
+    #f7b733 50%,
+    #ffe8a0 70%,
+    transparent 90%);
+  z-index: 0;
+}
+
+.trophy {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  width: 280px;
+  height: 200px;
+}
+
+.ranking_number {
+  position: relative;
+  color: #ffb73d;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 95px;                    /* ➜ maior */
+  margin: 0;
+  left: 25px;
+  top: 10px;
+}
+
+.ranking_word {
+  font-size: 42px;
+  color: #424c50;
+}
+
+.userAvatar {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  width: 55px;
+  height: 55px;
+}
+
+.userName {
+  position: absolute;
+  bottom: 32px;
+  left: 90px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #6b7578;
+  font-size: 20px;                   /* ➜ maior */
+}
+
+/* ============================
+   ÍCONE E SCORE
+============================ */
+.medals {
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  width: 90px;
+  height: 90px;
+}
+
+.gradesBox {
+  position: relative;
+  margin-left: 90px;
+}
+
+.gradesIcon {
+  position: absolute;
+  left: -75px;
+  top: 85px;
+  width: 95px;
+}
+
+.gradesBoxLabel {
+  margin: 10;
+  font-weight: 800;
+  color: #6a7073;
+  letter-spacing: 6px;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-left: -4REM;
+}
+
+.gradesBoxNum {
+  margin-top: -10px;
+  font-size: 52px;                   /* ➜ maior */
+  font-weight: 300;
+  color: #ea9518;
+}
+
+/* ============================
+   ANIMAÇÃO
+============================ */
+.slide-in-top {
+  animation: slide-in-top 0.7s cubic-bezier(0.55, 0.05, 0.36, 1) both;
+}
+
+@keyframes slide-in-top {
+  0% { transform: translateY(-40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 
 
