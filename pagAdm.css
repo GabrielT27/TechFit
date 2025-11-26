@@ -33,7 +33,7 @@ html, body {
     padding: 10px;
     background-color: rgb(35, 35, 35);
     border-color: rgb(0, 179, 255);
-    margin-top: 20px;
+    margin-top: 10px;
     
 }
 
@@ -41,6 +41,23 @@ button:hover {
   background-color: rgb(0, 179, 255);
   transition: background-color 0.5s;
 }
+
+.buttonexit {
+    border-radius: 20px;
+    width: 200px;
+    margin-left: 50px;
+    padding: 10px;
+    background-color: rgb(35, 35, 35);
+    border-color: rgb(0, 179, 255);
+    margin: auto;
+    
+}
+
+.buttonexit:hover {
+  background-color: rgb(0, 179, 255);
+  transition: background-color 0.5s;
+}
+
 
 .nos {
   position: relative;
@@ -149,7 +166,7 @@ button:hover {
   background: #000;
   color: #fff;
   box-shadow: 0 10px 30px rgba(3, 122, 201, 0.45);
-  margin: 18rem auto 0;
+  margin: 19rem auto 0;
 }
 
 .header {
@@ -339,7 +356,7 @@ button:hover {
 
 .circle-container {
   display: flex;
-  gap: 35px;
+  gap: 85px;
   justify-content: center;
   align-items: center;
   font-family: "Inter", sans-serif;
@@ -349,7 +366,7 @@ button:hover {
   width: 100%;
   position: relative;
   z-index: 10;
-  margin-top: 6rem;
+  margin-top: 9rem;
 }
 
 .circle-card {
