@@ -47,7 +47,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 150hv;
   background: linear-gradient(135deg, #103358, #000000);
 }
 
@@ -92,7 +92,7 @@ button:hover {
   transform: translateX(-50%);
   color: #007BFF;
   font-weight: 1000;
-  font-size: 4rem;
+  font-size: 3rem;
   
 }
 
@@ -116,12 +116,12 @@ button:hover {
 
 .func {
   position: absolute;
-  top: 20REM; /* distância do topo */
+  top: 8REM; /* distância do topo */
   left: 50%;
   transform: translateX(-50%);
   color: #ffc400;
   font-weight: 1000;
-  font-size: 4rem;
+  font-size: 3rem;
   
 }
 
@@ -400,6 +400,49 @@ button:hover {
   color: #0099ff;
 }
 
+.circlef {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff0099 calc(var(--percent) * 3.6deg),
+    #333333 0deg
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.circlef:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 15px rgb(255, 66, 239));
+}
+
+.circleinf {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #2df800 calc(var(--percent) * 3.6deg),
+    #333333 0deg
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.circleinf:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 15px rgb(17, 248, 0));
+}
+
+
 
 
 
@@ -417,7 +460,7 @@ button:hover {
   overflow: visible;                 /* ➜ deixa animação aparecer melhor */
 
   cursor: pointer;
-  margin-top: 34rem;
+  margin-top: 14rem;
 }
 
 .cards:hover {
@@ -597,6 +640,85 @@ button:hover {
   }
 }
 
+
+:root{
+  /* percent values (must sum 100) */
+  --p1: 40;
+  --p2: 30;
+  --p3: 20;
+  --p4: 10;
+
+  /* colors for slices */
+  --c1: #ff4db6; /* rosa */
+  --c2: #ffb84d; /* laranja */
+  --c3: #4dd0e1; /* cyan */
+  --c4: #8a7bff; /* roxo */
+
+  /* size */
+  --size: 220px;
+  --donut-size: 66px; /* inner hole */
+}
+
+.chart-wrap{
+  display:flex;
+  gap: 28px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+/* The pie / donut */
+.pie {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      var(--c1) 0 calc(var(--p1) * 1%),
+      var(--c2) calc(var(--p1) * 1%) calc((var(--p1) + var(--p2)) * 1%),
+      var(--c3) calc((var(--p1) + var(--p2)) * 1%) calc((var(--p1) + var(--p2) + var(--p3)) * 1%),
+      var(--c4) calc((var(--p1) + var(--p2) + var(--p3)) * 1%) 100%
+    );
+  position: relative;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45), inset 0 -6px 20px rgba(0,0,0,0.15);
+  transition: transform .28s ease;
+}
+
+.pie:hover{ transform: scale(1.04); }
+
+
+
+/* legend */
+.legend{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  min-width:170px;
+}
+
+.legend .item{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  font-size:0.95rem;
+  color: #dfe7f3;
+}
+
+.legend .swatch{
+  width:18px;
+  height:18px;
+  border-radius:4px;
+  flex:0 0 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* small responsive tweak */
+@media (max-width:520px){
+  :root{ --size: 170px; --donut-size: 54px; }
+  .legend{ min-width: 140px; font-size:0.9rem; }
+}
 
 
 
