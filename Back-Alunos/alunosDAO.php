@@ -1,7 +1,7 @@
 <?php 
 
 
-require_once 'Aluno.php';
+require_once 'alunos.php';
 require_once 'connection.php';
 
 
