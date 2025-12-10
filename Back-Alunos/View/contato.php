@@ -1,54 +1,56 @@
-
-<?php
-if (session_status() === PHP_SESSION_NONE) { session_start(); }
-$mensagem = $_SESSION['contato_msg'] ?? null;
-unset($_SESSION['contato_msg']);
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato - TechFit</title>
-
-  <!-- Seu CSS (mantido; ajuste o caminho se seu CSS estiver em View/css/contato.css) -->
-  css/contato.css
-
-  <!-- AOS (animações) -->
-  https://unpkg.com/aos@2.3.1/dist/aos.css
+  <link rel="stylesheet" href="contato.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- FONT AWESOME -->
-  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body data-aos="fade-down">
   <header>
-    <div data-aos="fade-down">
-      <h1>Contato e Localização</h1>
-      <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-        Estamos sempre de portas abertas para <span style="color: aqua;">exercitar você!</span>
-      </p>
-    </div>
+    <div class="" data-aos="fade-down">
+    <h1>Contato e Localização</h1>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Estamos sempre de portas abertas para <span style="color: aqua;">exercitar você!</span></p>
   </header>
-
-  <!-- Mensagem de feedback -->
-  <?php if (!empty($mensagem)): ?>
-    <div class="alert"><?php echo htmlspecialchars($mensagem, ENT_QUOTES, 'UTF-8'); ?></div>
-  <?php endif; ?>
 
   <!-- ÍCONES DE REDES SOCIAIS -->
   <div class="social-icons" data-aos="fade-down">
-    #<i class="fa-brands fa-facebook-f"></i></a>
-    #<i class="fa-brands fa-instagram"></i></a>
-    #<i class="fa-brands fa-whatsapp"></i></a>
-    #<i class="fa-brands fa-youtube"></i></a>
-    #<i class="fa-brands fa-twitter"></i></a>
+    <a href="https://facebook.com/suaPaginaDaIgreja" target="_blank" class="icon facebook" title="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+      
+    <a href="https://facebook.com/suaPaginaDaIgreja" target="_blank" class="icon instagram" title="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+      
+    <a href="https://facebook.com/suaPaginaDaIgreja" target="_blank" class="icon whatsapp" title="Whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="" class="icon youtube">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+
+    <a href="" class="icon twitter">
+        <i class="fa-brands fa-twitter"></i>
+    </a>
+  </div>
   </div>
 
+  
+  
+
   <div class="container contato-page">
+
     <!-- Formulário -->
     <section class="card contato" data-aos="fade-down">
       <h2>Fale Conosco</h2>
-      ../Controller/verificar_contato.php
+      <form action="#" method="post">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
@@ -63,39 +65,48 @@ unset($_SESSION['contato_msg']);
     </section>
 
     <!-- Localização -->
-    <section class="card localizacao" data-aos="fade-down">
-      <h2>Onde Estamos</h2>
-      <p>
-        <strong>Academia TechFit</strong><br>
-        Rua José Joaquim Duarte do Páteo, 222 - Jardim do Lago<br>
-        Limeira
-      </p>
+    <section class="card localizacao" date-aos="fade-down">
+      <h2 data-aos="fade-down">Onde Estamos</h2>
+      <p data-aos="fade-down"><strong>Academia TechFit</strong><br>
+      Rua José Joaquim Duarte do Páteo, 222 - Jardim do Lago<br>
+      Limeira</p>
 
-      https://share.google/wZor15nCFoeLBvQCG
-        MAPS.png
+      <a href="https://share.google/wZor15nCFoeLBvQCG">
+        <img src="MAPS.png" alt="" data-aos="fade-down" style="width: 100%; border-radius: 15px; margin-top: 35px;">
       </a>
-    </section>
+
+      
+
   </div>
 
-  <!-- Scripts -->
-  https://unpkg.com/aos@2.3.1/dist/aos.js</script>
-  <script>
-    AOS.init({ duration: 1200 }); // duração da animação em ms
-  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200, // duração da animação em ms
+ });
+</script>
 
   <footer>
-    <div class="mensagem">
-      TechFitLogo.png
-      <div class="separator"></div>
+          <div class="mensagem">
+            <img src="TechFitLogo.png" alt="" style="width: 200px; display: block; margin: 0 auto;">
 
-      mailto:gymtechfit@gmail.com
-        gymtechfit@gmail.com
-      </a>
 
-      <div class="copyright">
-        <p>© 2025 Academia Tech Fit - Todos os direitos reservados</p>
-      </div>
-    </div>
-  </footer>
+        
+
+            
+
+            <div class="separator" ></div>
+
+            <a href="mailto:gymtechfit@gmail.com"
+              style="color: #00c6ff; text-decoration: none; font-size: 1.1rem; display: block; margin: 20px 0;">
+              gymtechfit@gmail.com
+            </a>
+
+            <div class="copyright">
+              <p>© 2025 Academia Tech Fit - Todos os direitos reservados</p>
+            </div>
+          </div>
+        </footer>
 </body>
 </html>
