@@ -1,7 +1,8 @@
 <?php 
 
-require_once __DIR__ . '/alunosDAO.php';
-require_once __DIR__ . '/alunos.php';
+
+require_once __DIR__ . '/../Modal/alunos.php';
+require_once __DIR__ . '/../Modal/alunosDAO.php';
 
 class AlunosController {
 
