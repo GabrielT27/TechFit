@@ -34,20 +34,20 @@
   <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
   <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Sobre.html" style="color: #ffffff;">Sobre a academia</a>
+          <a class="nav-link active" aria-current="page" href="Sobre.php" style="color: #ffffff;">Sobre a academia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="noticias.html" style="color: #ffffff;">Notícias</a>
+          <a class="nav-link" href="noticias.php" style="color: #ffffff;">Notícias</a>
         </li>
        
         <li class="nav-item">
-          <a class="nav-link" href="contato.html" style="color: #ffffff;">Contato</a>
+          <a class="nav-link" href="contato.php" style="color: #ffffff;">Contato</a>
         </li>
       </ul>
     
     <!-- Botão Login -->
     <div style="margin-left: 20px; margin-right: 20px;">
-      <a href="login.html" class="btn btn-primary" style=" border: none; font-weight: bold;">
+      <a href="login.php" class="btn btn-primary" style=" border: none; font-weight: bold;">
             Login
         </a>
     </div>

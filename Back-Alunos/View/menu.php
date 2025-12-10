@@ -40,11 +40,11 @@
           <a class="nav-link active" aria-current="page" href="Sobre.html" style="color: #ffffff;">Sobre a academia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="noticias.html" style="color: #ffffff;">Notícias</a>
+          <a class="nav-link" href="noticias.php" style="color: #ffffff;">Notícias</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="contato.html" style="color: #ffffff;">Contato</a>
+          <a class="nav-link" href="contato.php" style="color: #ffffff;">Contato</a>
         </li>
       </ul>
     
