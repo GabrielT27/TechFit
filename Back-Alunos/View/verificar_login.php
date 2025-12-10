@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Validações básicas
     if (empty($usuario) || empty($senha)) {
-        header('Location: login.html?erro=campos_vazios');
+        header('Location: login.php?erro=campos_vazios');
         exit();
     }
     
@@ -32,12 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     } else {
         // Login falhou
-        header('Location: login.html?erro=credenciais_invalidas');
+        header('Location: login.php?erro=credenciais_invalidas');
         exit();
     }
 } else {
     // Se acessado diretamente sem POST
-    header('Location: login.html');
+    header('Location: login.php');
     exit();
 }
 ?>
