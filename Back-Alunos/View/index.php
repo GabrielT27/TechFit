@@ -17,10 +17,12 @@ if (file_exists($controllerPath)) {
     require_once $controllerPath;
 } else {
     // Se não encontrar, cria uma versão simplificada
-    class Aluno {
+    class Aluno
+    {
         private $id_aluno, $nome_aluno, $sobrenome_aluno, $status, $plano, $email_aluno, $cpf;
-        
-        public function __construct($id_aluno, $nome_aluno, $sobrenome_aluno, $status, $plano, $email_aluno, $cpf) {
+
+        public function __construct($id_aluno, $nome_aluno, $sobrenome_aluno, $status, $plano, $email_aluno, $cpf)
+        {
             $this->id_aluno = $id_aluno;
             $this->nome_aluno = $nome_aluno;
             $this->sobrenome_aluno = $sobrenome_aluno;
@@ -29,37 +31,63 @@ if (file_exists($controllerPath)) {
             $this->email_aluno = $email_aluno;
             $this->cpf = $cpf;
         }
-        
-        public function getIdAluno() { return $this->id_aluno; }
-        public function getNomeAluno() { return $this->nome_aluno; }
-        public function getSobrenomeAluno() { return $this->sobrenome_aluno; }
-        public function getStatus() { return $this->status; }
-        public function getPlano() { return $this->plano; }
-        public function getEmailAluno() { return $this->email_aluno; }
-        public function getCpf() { return $this->cpf; }
+
+        public function getIdAluno()
+        {
+            return $this->id_aluno;
+        }
+        public function getNomeAluno()
+        {
+            return $this->nome_aluno;
+        }
+        public function getSobrenomeAluno()
+        {
+            return $this->sobrenome_aluno;
+        }
+        public function getStatus()
+        {
+            return $this->status;
+        }
+        public function getPlano()
+        {
+            return $this->plano;
+        }
+        public function getEmailAluno()
+        {
+            return $this->email_aluno;
+        }
+        public function getCpf()
+        {
+            return $this->cpf;
+        }
     }
 
-    class AlunosController {
+    class AlunosController
+    {
         private $alunos = [];
         private $nextId = 3; // Começa com 3 porque já tem 2 alunos exemplo
-        
-        public function __construct() {
+
+        public function __construct()
+        {
             // Adiciona alguns alunos de exemplo
             $this->criar("João", "Silva", "Ativo", "Premium", "joao@email.com", "12345678901");
             $this->criar("Maria", "Santos", "Ativo", "Básico", "maria@email.com", "98765432109");
         }
-        
-        public function criar($nome, $sobrenome, $status, $plano, $email, $cpf) {
+
+        public function criar($nome, $sobrenome, $status, $plano, $email, $cpf)
+        {
             $aluno = new Aluno($this->nextId++, $nome, $sobrenome, $status, $plano, $email, $cpf);
             $this->alunos[] = $aluno;
             return $aluno;
         }
-        
-        public function ler() {
+
+        public function ler()
+        {
             return $this->alunos;
         }
-        
-        public function atualizar($id, $nome, $sobrenome, $status, $plano, $email, $cpf) {
+
+        public function atualizar($id, $nome, $sobrenome, $status, $plano, $email, $cpf)
+        {
             foreach ($this->alunos as $aluno) {
                 if ($aluno->getIdAluno() == $id) {
                     // Em sistema real, atualizaria os valores
@@ -68,8 +96,9 @@ if (file_exists($controllerPath)) {
             }
             return false;
         }
-        
-        public function excluir($id) {
+
+        public function excluir($id)
+        {
             foreach ($this->alunos as $key => $aluno) {
                 if ($aluno->getIdAluno() == $id) {
                     unset($this->alunos[$key]);
@@ -102,14 +131,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 );
                 $mensagem = 'Aluno cadastrado com sucesso!';
                 $tipoMensagem = 'sucesso';
-                
             } elseif ($_POST['acao'] === 'deletar') {
                 if (isset($_POST['id_aluno'])) {
                     $controller->excluir($_POST['id_aluno']);
                     $mensagem = 'Aluno excluído com sucesso!';
                     $tipoMensagem = 'sucesso';
                 }
-                
             } elseif ($_POST['acao'] === 'atualizar') {
                 if (isset($_POST['id_aluno'])) {
                     $controller->atualizar(
@@ -138,13 +165,15 @@ $alunos = $controller->ler();
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechFit - Sistema de Alunos</title>
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <!-- HEADER -->
@@ -152,7 +181,7 @@ $alunos = $controller->ler();
             <h1><i class="fas fa-users"></i> TechFit Academy</h1>
             <p>Sistema de Gerenciamento de Alunos</p>
         </div>
-        
+
         <!-- MENSAGENS -->
         <?php if ($mensagem): ?>
             <div class="mensagem <?php echo $tipoMensagem; ?>">
@@ -160,21 +189,21 @@ $alunos = $controller->ler();
                 <?php echo $mensagem; ?>
             </div>
         <?php endif; ?>
-        
+
         <!-- FORMULÁRIO DE CADASTRO -->
         <div class="form-container">
             <h2 style="color: #333; margin-bottom: 20px;">
                 <i class="fas fa-user-plus"></i> Cadastrar Novo Aluno
             </h2>
-            
+
             <form method="POST" class="form-cadastro">
                 <input type="hidden" name="acao" value="salvar">
-                
+
                 <div class="form-group">
                     <input type="text" name="nome" placeholder="Nome do Aluno" required>
                     <input type="text" name="sobrenome" placeholder="Sobrenome" required>
                 </div>
-                
+
                 <div class="form-group">
                     <select name="status" required>
                         <option value="">Selecione o Status</option>
@@ -182,7 +211,7 @@ $alunos = $controller->ler();
                         <option value="Inativo">Inativo</option>
                         <option value="Pendente">Pendente</option>
                     </select>
-                    
+
                     <select name="plano" required>
                         <option value="">Selecione o Plano</option>
                         <option value="Premium">Premium</option>
@@ -191,19 +220,19 @@ $alunos = $controller->ler();
                         <option value="Estudante">Estudante</option>
                     </select>
                 </div>
-                
+
                 <div class="form-group">
                     <input type="email" name="email" placeholder="E-mail (exemplo@gmail.com)" required>
-                    <input type="text" name="cpf" placeholder="CPF (somente números)" 
-                           pattern="\d{11}" title="Digite 11 números" required>
+                    <input type="text" name="cpf" placeholder="CPF (somente números)"
+                        pattern="\d{11}" title="Digite 11 números" required>
                 </div>
-                
+
                 <button type="submit" class="btn btn-cadastrar">
                     <i class="fas fa-save"></i> Cadastrar Aluno
                 </button>
             </form>
         </div>
-        
+
         <!-- LISTA DE ALUNOS -->
         <div class="table-container">
             <h2 style="color: #333; margin-bottom: 20px;">
@@ -212,7 +241,7 @@ $alunos = $controller->ler();
                     (Total: <?php echo count($alunos); ?>)
                 </span>
             </h2>
-            
+
             <?php if (count($alunos) > 0): ?>
                 <table>
                     <thead>
@@ -254,12 +283,12 @@ $alunos = $controller->ler();
                                             onclick="abrirModal(this)">
                                             <i class="fas fa-edit"></i> Editar
                                         </button>
-                                        
+
                                         <form method="POST" style="display: inline;">
                                             <input type="hidden" name="acao" value="deletar">
                                             <input type="hidden" name="id_aluno" value="<?php echo $aluno->getIdAluno(); ?>">
-                                            <button type="submit" class="btn-excluir" 
-                                                    onclick="return confirm('Tem certeza que deseja excluir o aluno <?php echo htmlspecialchars($aluno->getNomeAluno()); ?>?')">
+                                            <button type="submit" class="btn-excluir"
+                                                onclick="return confirm('Tem certeza que deseja excluir o aluno <?php echo htmlspecialchars($aluno->getNomeAluno()); ?>?')">
                                                 <i class="fas fa-trash"></i> Excluir
                                             </button>
                                         </form>
@@ -280,29 +309,29 @@ $alunos = $controller->ler();
             <?php endif; ?>
         </div>
     </div>
-    
+
     <!-- MODAL DE EDIÇÃO -->
     <div id="modalEditar" class="modal">
         <div class="modal-content">
             <span class="close" onclick="fecharModal()">&times;</span>
             <h2><i class="fas fa-edit"></i> Editar Aluno</h2>
-            
+
             <form method="POST" id="formEditar">
                 <input type="hidden" name="acao" value="atualizar">
                 <input type="hidden" id="edit_id" name="id_aluno">
-                
+
                 <div class="form-group">
                     <input type="text" id="edit_nome" name="nome" placeholder="Nome" required>
                     <input type="text" id="edit_sobrenome" name="sobrenome" placeholder="Sobrenome" required>
                 </div>
-                
+
                 <div class="form-group">
                     <select id="edit_status" name="status" required>
                         <option value="Ativo">Ativo</option>
                         <option value="Inativo">Inativo</option>
                         <option value="Pendente">Pendente</option>
                     </select>
-                    
+
                     <select id="edit_plano" name="plano" required>
                         <option value="Premium">Premium</option>
                         <option value="Básico">Básico</option>
@@ -310,24 +339,24 @@ $alunos = $controller->ler();
                         <option value="Estudante">Estudante</option>
                     </select>
                 </div>
-                
+
                 <div class="form-group">
                     <input type="email" id="edit_email" name="email" placeholder="E-mail" required>
                     <input type="text" id="edit_cpf" name="cpf" placeholder="CPF" required>
                 </div>
-                
+
                 <button type="submit" class="btn">
                     <i class="fas fa-save"></i> Salvar Alterações
                 </button>
             </form>
         </div>
     </div>
-    
+
     <script>
         // Função para abrir modal com dados do aluno
         function abrirModal(btn) {
             const data = btn.dataset;
-            
+
             document.getElementById('edit_id').value = data.id;
             document.getElementById('edit_nome').value = data.nome;
             document.getElementById('edit_sobrenome').value = data.sobrenome;
@@ -335,15 +364,15 @@ $alunos = $controller->ler();
             document.getElementById('edit_plano').value = data.plano;
             document.getElementById('edit_email').value = data.email;
             document.getElementById('edit_cpf').value = data.cpf;
-            
+
             document.getElementById('modalEditar').style.display = 'flex';
         }
-        
+
         // Função para fechar modal
         function fecharModal() {
             document.getElementById('modalEditar').style.display = 'none';
         }
-        
+
         // Fechar modal ao clicar fora
         window.onclick = function(event) {
             const modal = document.getElementById('modalEditar');
@@ -351,20 +380,20 @@ $alunos = $controller->ler();
                 fecharModal();
             }
         }
-        
+
         // Fechar modal com ESC
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 fecharModal();
             }
         });
-        
+
         // Máscara para CPF
         document.querySelectorAll('input[name="cpf"]').forEach(input => {
             input.addEventListener('input', function(e) {
                 let value = e.target.value.replace(/\D/g, '');
                 if (value.length > 11) value = value.substring(0, 11);
-                
+
                 if (value.length > 9) {
                     value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, '$1.$2.$3-$4');
                 } else if (value.length > 6) {
@@ -375,10 +404,10 @@ $alunos = $controller->ler();
                 e.target.value = value;
             });
         });
-        
+
         // Auto-foco no primeiro campo do formulário de cadastro
         document.querySelector('input[name="nome"]').focus();
-        
+
         // Confirmação para exclusão (já está no HTML, mas mantém como backup)
         document.querySelectorAll('.btn-excluir').forEach(btn => {
             btn.addEventListener('click', function(e) {
@@ -389,4 +418,5 @@ $alunos = $controller->ler();
         });
     </script>
 </body>
+
 </html>
