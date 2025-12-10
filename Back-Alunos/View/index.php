@@ -1,4 +1,15 @@
 <?php
+
+// Proteção de login - ADICIONE ISSO NO TOPO DO ARQUIVO
+session_start();
+
+if (!isset($_SESSION['usuario_logado'])) {
+    header('Location: login.html');
+    exit();
+}
+
+// Seu código continua aqui...
+
 // Inclui o controller - VERIFIQUE SE O CAMINHO ESTÁ CORRETO!
 $controllerPath = __DIR__ . '/../Controller/alunosController.php';
 
