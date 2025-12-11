@@ -155,15 +155,17 @@ $alunos = $controller->ler();
         <?php endif; ?>
         
         <!-- FORMULÁRIO DE CADASTRO -->
-        <div class="form-container">
-            <h2 style="color: #333; margin-bottom: 20px;">
+        <div class="container-alunos">
+            <h2 style="color: #ffffffff; margin-bottom: 20px;">
                 <i class="fas fa-user-plus"></i> Cadastrar Novo Aluno
             </h2>
+            
+            <br>
             
             <form method="POST" class="form-cadastro">
                 <input type="hidden" name="acao" value="salvar">
                 
-                <div class="form-group">
+                <div class="group">
                     <input type="text" name="nome" placeholder="Nome do Aluno" required>
                     <input type="text" name="sobrenome" placeholder="Sobrenome" required>
                 </div>
@@ -190,18 +192,22 @@ $alunos = $controller->ler();
                     <input type="text" name="cpf" pattern="(\d{11}|\d{3}\.\d{3}\.\d{3}-\d{2})" required>
 
                 </div>
+
+                <br><br>
                 
                 <button type="submit" class="btn btn-cadastrar">
                     <i class="fas fa-save"></i> Cadastrar Aluno
                 </button>
+
+                <br><br><br>
             </form>
         </div>
         
         <!-- LISTA DE ALUNOS -->
         <div class="table-container">
-            <h2 style="color: #333; margin-bottom: 20px;">
+            <h2 style="color: #ffffffff; margin-bottom: 20px;">
                 <i class="fas fa-list"></i> Alunos Cadastrados
-                <span style="font-size: 14px; color: #666; margin-left: 10px;">
+                <span style="font-size: 14px; color: #ffffffff; margin-left: 10px;">
                     (Total: <?php echo count($alunos); ?>)
                 </span>
             </h2>
