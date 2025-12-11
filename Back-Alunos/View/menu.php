@@ -12,11 +12,12 @@
   <link rel="stylesheet" href="stylee.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <title>TechFit</title>
 </head>
 
-<body>
+<body data-aos="fade-down">
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-aos="fade-down"
     style="border-bottom: 7px solid transparent; border-image: linear-gradient(135deg, #0f172a 0%, #1e3a8a 25%, #3b82f6 50%, #60a5fa 75%, #93c5fd 100%); border-image-slice: 1; padding-bottom: 0;">
@@ -24,7 +25,7 @@
 
     <div class="container-fluid" style="background-color: #000000; height: 110px;">
       <a class="navbar-brand" style="color: #ffffff;">
-        <img src="TechFitLogo.png" width="150" height="80" class="d-inline-block align-text-center"
+        <img src="Imgs/TechFitLogo.png" width="150" height="80" class="d-inline-block align-text-center"
           style="border-radius: 20px; margin-left: 40px; margin-top: -10px;">
       </a>
 
@@ -37,7 +38,7 @@
   <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
   <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Sobre.html" style="color: #ffffff;">Sobre a academia</a>
+          <a class="nav-link active" aria-current="page" href="Sobre.php" style="color: #ffffff;">Sobre a academia</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="noticias.php" style="color: #ffffff;">Notícias</a>
@@ -75,13 +76,13 @@
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="TechFitLogo.png" class="d-block w-100" style="border-radius: 30px;">
+          <img src="Imgs/Foto_Muay.png" class="d-block w-100" style="border-radius: 30px;">
         </div>
         <div class="carousel-item">
-          <img src="TechFitLogo.png" class="d-block w-100" style="border-radius: 30px;">
+          <img src="Imgs/jiU.png" class="d-block w-100" style="border-radius: 30px;">
         </div>
         <div class="carousel-item">
-          <img src="TechFitLogo.png" class="d-block w-100" style="border-radius: 30px;">
+          <img src="Imgs/kARATE.png" class="d-block w-100" style="border-radius: 30px;">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -130,7 +131,7 @@
 
 
 
-    <div class="container">
+    <div class="container" data-aos="fade-up">
     <div class="row justify-content-center g-4">
         <!-- Plano Black -->
         <div class="col-md-4 col-lg-4">
@@ -263,7 +264,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card" style="width: 100%; border-radius: 20px; text-align: center;">
-            <img src="ginasio-com-equipamento-de-ciclismo-indoor.jpg" class="card-img-top" alt="...">
+            <img src="Imgs/ginasio-com-equipamento-de-ciclismo-indoor.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Equipamentos de alto padrão.</p>
             </div>
@@ -272,7 +273,7 @@
 
         <div class="col-md-4">
           <div class="card" style="width: 100%; border-radius: 20px;">
-            <img src="pessoas-fazendo-ciclismo-indoor.jpg" class="card-img-top" alt="...">
+            <img src="Imgs/pessoas-fazendo-ciclismo-indoor.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text" style="text-align: center;">Salas exclusivas de aulas coletivas.</p>
             </div>
@@ -281,7 +282,7 @@
 
         <div class="col-md-4">
           <div class="card" style="width: 100%; border-radius: 20px; text-align: center;">
-            <img src="ainda-vida-de-equipamentos-de-ginastica.jpg" class="card-img-top" alt="...">
+            <img src="Imgs/ainda-vida-de-equipamentos-de-ginastica.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Área de musculação e cárdio.</p>
             </div>
@@ -325,7 +326,7 @@
   <div class="container">
     <div class="card-container-dicas">
       <div class="card-dicas animate__animated animate__zoomInUp">
-        <img src="mulher-em-forma-de-tiro-completo-correndo-ao-ar-livre.jpg" alt="Dica 1" class="card-img-dicas">
+        <img src="Imgs/mulher-em-forma-de-tiro-completo-correndo-ao-ar-livre.jpg" alt="Dica 1" class="card-img-dicas">
         <span style="position: absolute; top: 5px; left: 0; right: 0; color: white; font-size: 2rem; font-weight: bold; text-shadow: 2px 2px 8px #000; text-align: center;">
           ATLETISMO
         </span>
@@ -333,7 +334,7 @@
       </div>
       
       <div class="card-dicas animate__animated animate__zoomInUp">
-        <img src="jogador-de-futebol-pontape-livre.jpg" alt="Dica 2" class="card-img-dicas">
+        <img src="Imgs/jogador-de-futebol-pontape-livre.jpg" alt="Dica 2" class="card-img-dicas">
         <span style="position: absolute; top: 5px; left: 0; right: 0; color: white; font-size: 2rem; font-weight: bold; text-shadow: 2px 2px 8px #000; text-align: center;">
           FUTEBOL
         </span>
@@ -341,7 +342,7 @@
       </div>
       
       <div class="card-dicas animate__animated animate__zoomInUp">
-        <img src="mulher-jovem-nadar-na-piscina.jpg" alt="Dica 3" class="card-img-dicas">
+        <img src="Imgs/mulher-jovem-nadar-na-piscina.jpg" alt="Dica 3" class="card-img-dicas">
         <span style="position: absolute; top: 5px; left: 0; right: 0; color: white; font-size: 2rem; font-weight: bold; text-shadow: 2px 2px 8px #000; text-align: center;">
           NATAÇÃO
         </span>
@@ -349,7 +350,7 @@
       </div>
       
       <div class="card-dicas animate__animated animate__zoomInUp">
-        <img src="retrato-de-jogador-de-basquete-preto-em-um-salao-de-basquete.jpg" alt="Dica 3" class="card-img-dicas">
+        <img src="Imgs/retrato-de-jogador-de-basquete-preto-em-um-salao-de-basquete.jpg" alt="Dica 3" class="card-img-dicas">
         <span style="position: absolute; top: 5px; left: 0; right: 0; color: white; font-size: 2rem; font-weight: bold; text-shadow: 2px 2px 8px #000; text-align: center;">
           BASQUETE
         </span>
@@ -381,7 +382,7 @@
               <!-- Card 1 -->
               <div class="col">
                 <div class="card h-100">
-                  <img src="pessoas-sorridentes-se-divertindo-na-aula-de-zumba (1).jpg" class="card-img-top"
+                  <img src="Imgs/pessoas-sorridentes-se-divertindo-na-aula-de-zumba (1).jpg" class="card-img-top"
                     alt="FitDance">
 
                   <div class="card-header text-center p-2"
@@ -416,7 +417,7 @@
               <!-- Card 2 -->
               <div class="col">
                 <div class="card h-100">
-                  <img src="close-up-de-homem-fazendo-treino-de-crossfit.jpg" class="card-img-top" alt="FitDance">
+                  <img src="Imgs/close-up-de-homem-fazendo-treino-de-crossfit.jpg" class="card-img-top" alt="FitDance">
 
                  <div class="card-header text-center p-2"
                     style="border-color: #0353a4;background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 50%, #2d4a78 100%); color: white; font-weight: bold;">
@@ -449,7 +450,7 @@
               <!-- Card 3 -->
               <div class="col">
                 <div class="card h-100">
-                  <img src="garota-kickboxer.jpg" class="card-img-top" alt="FitDance">
+                  <img src="Imgs/garota-kickboxer.jpg" class="card-img-top" alt="FitDance">
 
                   <div class="card-header text-center p-2"
                     style="border-color: #0353a4;background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 50%, #2d4a78 100%); color: white;font-weight: bold;">
@@ -470,7 +471,7 @@
                     </div>
 
 
-                    <p>Karatê, Jiu-Jitsu, Capoeira, Kung-Fu e Taekwondo são algumas das inspirações para a aula de
+                    <p>Karatê, Jiu-Jitsu, Capoeira, MuayThai e Taekwondo são algumas das inspirações para a aula de
                       BodyCombat. Esse treino ainda trabalha todo o corpo.</p>
 
                     <br>
@@ -507,7 +508,7 @@
         <!-- FOOTER -->
         <footer>
           <div class="mensagem">
-            <img src="TechFitLogo.png" style="width: 190px; height: 120px; border-radius: 20px; margin-left: 500px;" alt="Logo TechFit">
+            <img src="Imgs/TechFitLogo.png" style="width: 190px; height: 120px; border-radius: 20px; margin-left: 500px;" alt="Logo TechFit">
 
             <div class="separator" data-aos="fade-down"></div>
 

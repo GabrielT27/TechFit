@@ -42,7 +42,7 @@
   align-items: center;
   min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.93)),
-              url("TechFit Loja.png") center/cover no-repeat;
+              url("Imgs/TechFit\ Loja.png") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 2rem;
@@ -339,7 +339,7 @@
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
    /* DEIXA O BACKGROUND IMAGEM RESPONSIVO/CENTRALIZADO */
-  background-image: url("Os\ Números\ do\ Brasileirão\ Time\ com\ Melhor\ Ataque\,\ Pior\ Defesa\ e\ Muito\ Mais\ \(5\).png");
+  background-image: url("Imgs/Os\ Números\ do\ Brasileirão\ Time\ com\ Melhor\ Ataque\,\ Pior\ Defesa\ e\ Muito\ Mais\ \(5\).png");
   background-size: cover;         /* Faz a imagem preencher sem distorcer */
   background-position: center;    /* Centraliza a imagem */
   background-repeat: no-repeat;   /* Evita repetição */

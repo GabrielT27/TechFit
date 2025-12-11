@@ -72,7 +72,7 @@
       Limeira</p>
 
       <a href="https://share.google/wZor15nCFoeLBvQCG">
-        <img src="MAPS.png" alt="" data-aos="fade-down" style="width: 100%; border-radius: 15px; margin-top: 35px;">
+        <img src="Imgs/MAPS.png" alt=""  style="width: 100%; border-radius: 15px; margin-top: 35px;">
       </a>
 
       

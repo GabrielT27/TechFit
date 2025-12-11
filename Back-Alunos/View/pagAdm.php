@@ -7,8 +7,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
+
 <title>Admnistração TechFit</title>
 </head>
+
+
 <body>
 <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"  aria-controls="offcanvasWithBothOptions"><i class="bi bi-list fs-2" style="color: white;" ></i></button>
 
@@ -19,7 +22,7 @@
 
 <h2 style="text-align: center; color: white; margin-bottom: 35px; margin-top: -20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Olá, Gabriel</h2>
 
-<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img src="perfil.jpg" 
+<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img src="Imgs/perfil.jpg" 
 class="perfil" 
 style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover;"></h5>
 
@@ -58,7 +61,7 @@ style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover;"></h5
 <div class="crypto-card">
 <div class="header">
 <span class="logo">NOVOS ALUNOS NO PERÍODO</span>
-<span class="open">Open App →</span>
+
 </div>
 
 <!-- CRIANDO O PRIMEIRO CARD IDENTIFICANDO ELE COM O ID 1  -->
@@ -152,7 +155,7 @@ d="M0,25 L5,25 L10,25 L15,25 L20,25 L25,25 L30,25 L35,25 L40,25 L45,25 L50,25 L5
 <div class="crypto-card">
 <div class="header">
 <span class="logo">NOVOS  ALUNOS NO PERÍODO</span>
-<span class="open">Open App →</span>
+
 </div>
 
 <!-- MELHORAR OS DASHBOARDS -->

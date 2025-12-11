@@ -10,9 +10,10 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Local stylesheet -->
   <link rel="stylesheet" href="sobre.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body data-aos="fade-down">
 
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary" 
@@ -21,7 +22,7 @@
 
     <div class="container-fluid" style="background-color: #000000; height: 110px;">
       <a class="navbar-brand" style="color: #ffffff;">
-        <img src="TechFitLogo.png" alt="Logo TechFit" width="150" height="80" class="d-inline-block align-text-center logo-img"
+        <img src="Imgs/TechFitLogo.png" alt="Logo TechFit" width="150" height="80" class="d-inline-block align-text-center logo-img"
           style="border-radius: 20px; margin-left: 40px; margin-top: -10px;">
       </a>
 
@@ -77,7 +78,7 @@
 </button>
 
 <div class="image-container">
-  <img src="close-up-de-homem-fazendo-treino-de-crossfit.jpg" alt="Homem fazendo treino" width="680" height="auto" style="border-radius: 20px; margin-top: 35px
+  <img src="Imgs/close-up-de-homem-fazendo-treino-de-crossfit.jpg" alt="Homem fazendo treino" width="680" height="auto" style="border-radius: 20px; margin-top: 35px
   ;">
 
   <div class="hover-text">
@@ -103,36 +104,36 @@ Ao longo desses anos, testemunhamos histórias incríveis de superação. Vimos 
   <div class="row justify-content-center">
     <div class="col-md-3">
       <div class="card">
-        <img src="ainda-vida-de-equipamentos-de-ginastica.jpg" class="card-img-top" alt="...">
+        <img src="Imgs/MuayKids.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">Texto do card 1.</p>
+          <p class="card-text">ESPAÇO E APRENDIZADO PARA TODAS AS IDADES</p>
         </div>
       </div>
     </div>
 
     <div class="col-md-3">
       <div class="card">
-        <img src="mulher-jovem-nadar-na-piscina.jpg" class="card-img-top" alt="...">
+        <img src="Imgs/muayy.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">Texto do card 2.</p>
+          <p class="card-text">GRADUAÇÃO NAS ARTES MARCIAIS</p>
         </div>
       </div>
     </div>
 
     <div class="col-md-3">
       <div class="card">
-        <img src="ainda-vida-de-equipamentos-de-ginastica.jpg" class="card-img-top" alt="...">
+        <img src="Imgs/ALLMUAY.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">Texto do card 3.</p>
+          <p class="card-text">INCLUSÃO E IGUALDADE</p>
         </div>
       </div>
     </div>
 
     <div class="col-md-3">
       <div class="card">
-        <img src="ainda-vida-de-equipamentos-de-ginastica.jpg" class="card-img-top" alt="...">
+        <img src="Imgs/CERTIFICADO.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">Texto do card 4.</p>
+          <p class="card-text">SEMINÁRIOS E PALESTRAS</p>
         </div>
       </div>
     </div>
@@ -147,7 +148,7 @@ Ao longo desses anos, testemunhamos histórias incríveis de superação. Vimos 
     
   </button>
   <div style="text-align: center; margin-top: 20px;">
-   <img src="perfil.jpg" 
+   <img src="Imgs/perfil.jpg" 
     class="perfil" 
      style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover;">
     <p style="margin-top: 60px; font-size: 30px; font-weight: bold; color: rgb(21, 162, 186);">Gabriel Marques</p>
@@ -183,7 +184,7 @@ Ao longo desses anos, testemunhamos histórias incríveis de superação. Vimos 
     <div class="loc">
       <button style="margin-top: 45px;">ONDE ESTAMOS LOCALIZADOS</button>
       <a href="https://share.google/wZor15nCFoeLBvQCG">
-      <img src="MAPS.png"  alt="" class="loc"></a>
+      <img src="Imgs/MAPS.png"  alt="" class="loc"></a>
  
 
     </div>
@@ -193,7 +194,7 @@ Ao longo desses anos, testemunhamos histórias incríveis de superação. Vimos 
 
     <footer>
           <div class="mensagem">
-            <img src="TechFitLogo.png" alt="" style="width: 200px; display: block; margin: 0 auto;">
+            <img src="Imgs/TechFitLogo.png" alt="" style="width: 200px; display: block; margin: 0 auto;">
 
 
             <div class="separator"></div>

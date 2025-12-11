@@ -11,6 +11,7 @@
   <!-- Local stylesheet -->
   <link rel="stylesheet" href="noticias.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
 </head>
 <body> 
 
@@ -21,7 +22,7 @@
 
     <div class="container-fluid" style="background-color: #000000; height: 110px;">
       <a class="navbar-brand" style="color: #ffffff;">
-        <img src="TechFitLogo.png" alt="Logo TechFit" width="150" height="80" class="d-inline-block align-text-center logo-img"
+        <img src="Imgs/TechFitLogo.png" alt="Logo TechFit" width="150" height="80" class="d-inline-block align-text-center logo-img"
           style="border-radius: 20px; margin-left: 40px; margin-top: -10px;">
       </a>
 
@@ -60,7 +61,7 @@
 
   <div class="fundo">
     <h1 class="simples">NOVA ACADEMIA A CAMINHO</h1>
-    <img src="Patrocinador Oficial.png" alt="" class="img-centro">
+    <img src="Imgs/Patrocinador Oficial.png" alt="" class="img-centro">
   </div>
 
   <div class="nos">
@@ -155,7 +156,7 @@
   <h1 class="evento" >EVENTOS E PROMOÇÕES</h1>
 
   <div class="carde" style=" box-shadow: 0 4px 30px rgba(0, 146, 230, 0.781);">
-  <img src="grupo-de-pessoas-que-se-exercitam-juntas-ao-ar-livre.jpg" class="imge">
+  <img src="Imgs/grupo-de-pessoas-que-se-exercitam-juntas-ao-ar-livre.jpg" class="imge">
   <div class="carde__content">
     <p class="carde__title"></p>
     <p class="carde__description"></p>
@@ -172,7 +173,7 @@
 
 <footer>
           <div class="mensagem">
-            <img src="TechFitLogo.png" alt="" style="width: 200px; display: block; margin: 0 auto;">
+            <img src="Imgs/TechFitLogo.png" alt="" style="width: 200px; display: block; margin: 0 auto;">
 
 
             <div class="separator"></div>
