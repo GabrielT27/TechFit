@@ -147,7 +147,7 @@
                         <div class="price-old">R$ 149,90</div>
                         
                         <div class="price-new">
-                            <span style="color: white;">R$ 9,90 *</span>
+                            <span style="color: white;">R$ 99,90 *</span>
                             <span class="discount-badge discount-high">93% OFF</span>
                         </div>
                         
@@ -183,7 +183,7 @@
                         <div class="price-old">R$ 99,90</div>
                         
                         <div class="price-new">
-                            <span>R$ 9,90 *</span>
+                            <span>R$ 47,90 *</span>
                             <span class="discount-badge discount-medium">90% OFF</span>
                         </div>
                         
@@ -219,7 +219,7 @@
                         <div class="price-old">R$ 99,90</div>
                         
                         <div class="price-new">
-                            <span>R$ 9,90 *</span>
+                            <span>R$ 49,90 *</span>
                             <span class="discount-badge discount-medium">90% OFF</span>
                         </div>
                         

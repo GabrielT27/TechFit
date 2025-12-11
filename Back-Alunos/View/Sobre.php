@@ -78,7 +78,7 @@
 </button>
 
 <div class="image-container">
-  <img src="Imgs/close-up-de-homem-fazendo-treino-de-crossfit.jpg" alt="Homem fazendo treino" width="680" height="auto" style="border-radius: 20px; margin-top: 35px
+  <img src="Imgs/tiro-completo-pessoas-vestindo-ternos-no-ginasio.jpg" alt="Homem fazendo treino" width="680" height="auto" style="border-radius: 20px; margin-top: 35px
   ;">
 
   <div class="hover-text">
@@ -183,7 +183,7 @@ Ao longo desses anos, testemunhamos histórias incríveis de superação. Vimos 
 
     <div class="loc">
       <button style="margin-top: 45px;">ONDE ESTAMOS LOCALIZADOS</button>
-      <a href="https://share.google/wZor15nCFoeLBvQCG">
+      <a href="https://www.google.com/maps/place/Skyfit+Academias+-+Unidade+Americana/@-22.762063,-47.342242,17z/data=!3m1!4b1!4m6!3m5!1s0x94c89902f0fb0d47:0x31995ec36d099807!8m2!3d-22.762063!4d-47.342242!16s%2Fg%2F11ry5j65v1?entry=ttu&g_ep=EgoyMDI1MTIwOC4wIKXMDSoASAFQAw%3D%3D">
       <img src="Imgs/MAPS.png"  alt="" class="loc"></a>
  
 

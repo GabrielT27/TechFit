@@ -71,7 +71,7 @@
       Rua José Joaquim Duarte do Páteo, 222 - Jardim do Lago<br>
       Limeira</p>
 
-      <a href="https://share.google/wZor15nCFoeLBvQCG">
+      <a href="https://www.google.com/maps/place/Skyfit+Academias+-+Unidade+Americana/@-22.762063,-47.342242,17z/data=!3m1!4b1!4m6!3m5!1s0x94c89902f0fb0d47:0x31995ec36d099807!8m2!3d-22.762063!4d-47.342242!16s%2Fg%2F11ry5j65v1?entry=ttu&g_ep=EgoyMDI1MTIwOC4wIKXMDSoASAFQAw%3D%3D">
         <img src="Imgs/MAPS.png" alt=""  style="width: 100%; border-radius: 15px; margin-top: 35px;">
       </a>
 
