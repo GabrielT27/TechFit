@@ -12,6 +12,8 @@ class AlunosDAO {
     public function __construct() {
 
         $this->conn = Connection::getInstance();
+
+        
         
 
          // cria tabela se nao existir 
@@ -23,9 +25,11 @@ class AlunosDAO {
             status varchar(30) not null,
             plano varchar (100) not null,
             email_aluno varchar (230) not null,
-            cpf varchar(13) not null
+            cpf varchar(20) not null
             )
             ");
+
+             $this->conn->exec("ALTER TABLE Alunos MODIFY cpf VARCHAR(20)");
     }
 
 
@@ -87,14 +91,16 @@ class AlunosDAO {
         WHERE id_aluno = :id_aluno
         ");
 
-        $stmt->execute( [
-            ':novoNome'  => $novoNome,
-            ':novoSobreNomeAluno'  => $novoSobreNomeAluno,
-            ':novoStatus'  => $novoStatus,
-            ':novoPlano'  => $novoPlano,
-            ':novoEmailAluno'  => $novoEmailAluno,
-            ':NovoCpf' => $novoCpf
-        ]);
+        $stmt->execute([
+    ':novoNome'  => $novoNome,
+    ':novoSobreNomeAluno'  => $novoSobreNomeAluno,
+    ':novoStatus'  => $novoStatus,
+    ':novoPlano'  => $novoPlano,
+    ':novoEmailAluno'  => $novoEmailAluno,
+    ':novoCpf' => $novoCpf,
+    ':id_aluno' => $id_aluno
+]);
+
     }
 
 

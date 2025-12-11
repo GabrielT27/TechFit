@@ -19,7 +19,7 @@ CREATE TABLE PLANOS (
 CREATE TABLE ALUNOS (
     id_aluno INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
-    cpf CHAR(11),
+    cpf CHAR(14),
     dtn DATE,
     sexo CHAR(1),
     telefone CHAR(11),
@@ -130,3 +130,6 @@ CREATE TABLE REALIZAM (
     FOREIGN KEY (id_pagamento) REFERENCES PAGAMENTOS(id_pagamento),
     FOREIGN KEY (id_aluno) REFERENCES ALUNOS(id_aluno)
 );
+
+
+

@@ -32,7 +32,7 @@
 </head>
 <body>
     <main class="container">
-        <h1>🔐 Login Admin</h1>
+        <h1> Login </h1>
         
         <!-- Mensagem de erro -->
         <div id="mensagemErro" class="mensagem-erro"></div>
@@ -58,7 +58,7 @@
 
         <!-- Botão de Login -->
         <button type="button" class="login" id="loginBtn" onclick="fazerLogin()">
-            Entrar no Painel Admin
+            Entrar 
         </button>
 
         <div style="margin-top: 18px;">
@@ -70,11 +70,7 @@
             </p>
         </div>
         
-        <!-- Informação para teste -->
-        <div class="info-teste">
-            <p><strong>💡 Para teste rápido:</strong></p>
-            <p>Usuário: <strong>admin</strong> | Senha: <strong>admin123</strong></p>
-        </div>
+        
     </main>
 
     <script>
