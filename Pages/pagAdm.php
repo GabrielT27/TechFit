@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="pagAdm.css">
+<link rel="stylesheet" href="../FrontEnd/css/pagAdm.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
@@ -22,7 +22,7 @@
 
 <h2 style="text-align: center; color: white; margin-bottom: 35px; margin-top: -20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Olá, Gabriel</h2>
 
-<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img src="Imgs/perfil.jpg" 
+<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img src="../Imgs/perfil.jpg" 
 class="perfil" 
 style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover;"></h5>
 
