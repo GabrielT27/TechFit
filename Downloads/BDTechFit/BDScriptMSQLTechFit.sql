@@ -51,7 +51,7 @@ CREATE TABLE FUNCIONARIO (
     nome VARCHAR(50),
     cargo VARCHAR(50),
     turno CHAR(1),
-    login VARCHAR(200),
+    email VARCHAR(200),
     endereco VARCHAR(200),
     cpf CHAR(11),
     telefone CHAR(11),
