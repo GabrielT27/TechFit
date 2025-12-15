@@ -9,9 +9,10 @@
   <!-- AOS animation library (used by data-aos attributes) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Local stylesheet -->
-  <link rel="stylesheet" href="../FrontEnd/css/sobre.css">
+  <link rel="stylesheet" href="../FrontEnd/sobre.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
 </head>
 <body data-aos="fade-down">
 
@@ -22,7 +23,7 @@
 
     <div class="container-fluid" style="background-color: #000000; height: 110px;">
       <a class="navbar-brand" style="color: #ffffff;">
-        <img src="Imgs/TechFitLogo.png" alt="Logo TechFit" width="150" height="80" class="d-inline-block align-text-center logo-img"
+        <img src="/Imgs/tiro-completo-pessoas-vestindo-ternos-no-ginasio.jpg" alt="Logo TechFit"  width="150" height="80" class="d-inline-block align-text-center logo-img"
           style="border-radius: 20px; margin-left: 40px; margin-top: -10px;">
       </a>
 
