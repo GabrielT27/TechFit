@@ -25,13 +25,13 @@ class Funcionario{
 
     private $salario;
 
-    private $id_modalidade;
+    private $modalidade;
 
 
 
-    public function __construct($id_func, $nomeFunc, $cargo, $turno, $emailFunc, $enderecoFunc, $cpfFunc, $telFunc, $dtnFunc, $dt_admFunc, $salario, $id_modalidade) {
+    public function __construct($id_func, $nomeFunc, $cargo, $turno, $emailFunc, $enderecoFunc, $cpfFunc, $telFunc, $dtnFunc, $dt_admFunc, $salario, $modalidade) {
 
-
+  
         $this->setIdFunc($id_func);
         $this->setNomeFunc($nomeFunc);
         $this->setCargo($cargo);
@@ -43,7 +43,7 @@ class Funcionario{
         $this->setDtnFunc($dtnFunc);
         $this->setDtAdm($dt_admFunc);
         $this->setSalario($salario);
-        $this->setIdModalidade($id_modalidade);
+        $this->setModalidade($modalidade);
     }
 
 
@@ -167,12 +167,12 @@ class Funcionario{
         return $this;
     }
 
-    public function getIdModalidade() {
-        return $this->id_modalidade;
+    public function getModalidade() {
+        return $this->modalidade;
     }
 
-    public function setIdModalidade($id_modalidade) {
-        $this->id_modalidade=$id_modalidade;
+    public function setModalidade($modalidade) {
+        $this->modalidade=$modalidade;
 
         return $this;
 

@@ -48,7 +48,7 @@ CREATE TABLE PAGAMENTOS (
 
 CREATE TABLE FUNCIONARIO (
     id_func INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(50),
+    nome_func VARCHAR(50),
     cargo VARCHAR(50),
     turno CHAR(1),
     email VARCHAR(200),
@@ -58,7 +58,7 @@ CREATE TABLE FUNCIONARIO (
     dtn DATE,
     dt_adm DATE,
     salario DECIMAL(10,2),
-    id_modalidade INT
+    modalidade VARCHAR(200)
 );
 
 

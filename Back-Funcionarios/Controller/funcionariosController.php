@@ -26,7 +26,7 @@ class FuncionariosController {
 
     // CREATE CRIAR NOVOS FUNCIONARIOS
 
-    public function criar($id_func, $nomeFunc, $cargo, $turno, $emailFunc, $enderecoFunc, $cpfFunc, $telFunc, $dtnFunc, $dt_admFunc, $salario, $id_modalidade)  {
+    public function criar($id_func, $nomeFunc, $cargo, $turno, $emailFunc, $enderecoFunc, $cpfFunc, $telFunc, $dtnFunc, $dt_admFunc, $salario, $modalidade)  {
 
         $funcionario = new Funcionario
         (null,
@@ -40,15 +40,15 @@ class FuncionariosController {
          $dtnFunc,
          $dt_admFunc,
          $salario,
-         $id_modalidade);
+         $modalidade);
         
     }
 
 
-    // UPDATE - ATUALIZAR FUNCIORIO EXISTENTE 
+    // UPDATE - ATUALIZAR FUNCIONARIO EXISTENTE 
 
 
-    public function atualizar($id_func, $nomeFunc, $cargo, $turno, $emailFunc, $enderecoFunc, $cpfFunc, $telFunc, $dtnFunc, $dt_admFunc, $salario, $id_modalidade) 
+    public function atualizar($id_func, $nomeFunc, $cargo, $turno, $emailFunc, $enderecoFunc, $cpfFunc, $telFunc, $dtnFunc, $dt_admFunc, $salario, $modalidade) 
     {
         $this->dao->atualizarFuncionarios($id_func,
         $nomeFunc,
@@ -61,7 +61,7 @@ class FuncionariosController {
         $dtnFunc,
         $dt_admFunc,
         $salario,
-        $id_modalidade);
+        $modalidade);
     }
 
 

@@ -1,4 +1,4 @@
--- Geração de Modelo físico
+-- Geraï¿½ï¿½o de Modelo fï¿½sico
 -- Sql ANSI 2003 - brModelo.
 
 
@@ -51,10 +51,10 @@ CREATE TABLE FUNCIONARIO (
 id_func int auto_increment PRIMARY KEY,
 cargo varchar(50),
 endereco varchar(200),
-nome varchar(50),
+nome_func varchar(50),
 turno char(1),
 login varchar(200),
-id_modalidade int,
+modalidade varchar(200),
 dtn date,
 cpf char(11),
 telefone char(11),
